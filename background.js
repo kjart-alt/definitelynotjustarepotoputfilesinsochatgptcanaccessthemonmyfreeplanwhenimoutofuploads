@@ -1208,7 +1208,7 @@ async function ovlPush(force = false) {
   // Хвост короткий: старые строки плашка помнит сама, слать нужно только
   // те, что ещё могут поменяться.
   const rows = ovlCues.slice(-OVL_ROWS)
-    .map((c) => ({ id: c.line ?? c.from, text: c.text, orig: ovlDual ? c.orig : '', open: !!c.open }));
+    .map((c) => ({ id: c.line ?? c.from, text: c.text, orig: c.orig, open: !!c.open }));
   const ok = await chrome.tabs.sendMessage(tab, { type: 'OVERLAY_ROWS', rows }).then(() => true, () => false);
   if (ok) { ovlLost = false; return; }
   if (ovlLost || tab !== ovlTab) return;
