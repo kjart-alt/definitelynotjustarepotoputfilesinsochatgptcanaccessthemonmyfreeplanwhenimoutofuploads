@@ -3,7 +3,6 @@
   const VERSION = 'youtube-native-captions-1';
   const PLAYER_SELECTOR = '#container';
   const CAPTION_CONTAINER_ID = 'ytp-caption-window-container';
-  const CAPTION_WINDOW_ID = 'caption-window-_0';
 
   if (globalThis.__atOverlay?.version === VERSION && globalThis.__atOverlay.alive()) {
     return;
@@ -68,9 +67,39 @@
     return el;
   }
 
+  function findExistingCaptionWindow(parent) {
+    const windows = [...parent.children].filter(
+      (el) => el.classList?.contains('caption-window')
+    );
+    if (!windows.length) return null;
+
+    // YouTube's suffix (_0, _1, ...) is not stable between player sessions.
+    // Prefer the most recent visible window that already contains caption
+    // segments; otherwise reuse the most recent caption window.
+    const visibleWithText = [...windows].reverse().find((win) => {
+      const style = getComputedStyle(win);
+      return win.querySelector('.ytp-caption-segment') &&
+        style.display !== 'none' &&
+        style.visibility !== 'hidden' &&
+        win.getClientRects().length > 0;
+    });
+    if (visibleWithText) return visibleWithText;
+
+    return [...windows].reverse().find((win) => {
+      const style = getComputedStyle(win);
+      return style.display !== 'none' &&
+        style.visibility !== 'hidden' &&
+        win.getClientRects().length > 0;
+    }) || windows.at(-1);
+  }
+
   function createCaptionWindow(parent) {
     const el = document.createElement('div');
-    el.id = CAPTION_WINDOW_ID;
+    // Use _0 if it is free, otherwise choose the first unused YouTube-style
+    // numeric ID. Never create a duplicate of a window YouTube already made.
+    let index = 0;
+    while (document.getElementById(`caption-window-_${index}`)) index++;
+    el.id = `caption-window-_${index}`;
     el.className = 'caption-window ytp-caption-window-bottom';
     el.dir = 'ltr';
     el.tabIndex = 0;
@@ -98,7 +127,7 @@
     let parent = player.querySelector('#' + CAPTION_CONTAINER_ID);
     if (!parent) parent = createCaptionContainer(player);
 
-    let win = parent.querySelector(':scope > #' + CAPTION_WINDOW_ID);
+    let win = findExistingCaptionWindow(parent);
     if (!win) win = createCaptionWindow(parent);
 
     return { parent, win };
@@ -269,9 +298,9 @@
 
       const player = document.querySelector(PLAYER_SELECTOR);
       const currentParent = player?.querySelector('#' + CAPTION_CONTAINER_ID);
-      const currentWindow = currentParent?.querySelector(
-        ':scope > #' + CAPTION_WINDOW_ID
-      );
+      const currentWindow = currentParent
+        ? findExistingCaptionWindow(currentParent)
+        : null;
 
       if (
         currentWindow !== captionWindow ||
