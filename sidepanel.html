@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audio Translator</title>
+  <link rel="stylesheet" href="graphite.css">
+</head>
+<body>
+  <!-- Графитовая панель: та же sidepanel.js, другая вёрстка. Управления три —
+       язык звука, язык перевода, выключатель; слова только в подсказках.
+       Сборка кладёт этот файл поверх ext/sidepanel.html (ui/pack.sh). -->
+  <div class="hd">
+    <span class="b" id="bsrc">
+      <button class="lg" id="src" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Audio language" data-i18n-aria="audioLang">
+        <svg class="ic" viewBox="0 0 9 8" width="18" height="16" aria-hidden="true"><rect x="0" y="2" width="2" height="4"></rect><rect x="2" y="1" width="1" height="6"></rect><rect x="3" y="0" width="1" height="8"></rect><rect x="5" y="2" width="1" height="1"></rect><rect x="6" y="3" width="1" height="2"></rect><rect x="5" y="5" width="1" height="1"></rect><rect x="7" y="0" width="1" height="1"></rect><rect x="8" y="1" width="1" height="6"></rect><rect x="7" y="7" width="1" height="1"></rect></svg>
+        <span class="code"></span>
+        <svg class="cr" viewBox="0 0 5 3" width="10" height="6" aria-hidden="true"><rect x="0" y="0" width="5" height="1"></rect><rect x="1" y="1" width="3" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></svg>
+      </button>
+      <span class="tip l" role="tooltip"><i></i><span data-i18n="audioLang">Audio language</span></span>
+    </span>
+    <svg class="ar" viewBox="0 0 7 5" width="14" height="10" aria-hidden="true"><rect x="0" y="2" width="6" height="1"></rect><rect x="4" y="0" width="1" height="1"></rect><rect x="5" y="1" width="1" height="1"></rect><rect x="6" y="2" width="1" height="1"></rect><rect x="5" y="3" width="1" height="1"></rect><rect x="4" y="4" width="1" height="1"></rect></svg>
+    <span class="b" id="bdst">
+      <button class="lg" id="dst" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Translate into" data-i18n-aria="translateInto">
+        <svg class="ic" viewBox="0 0 10 8" width="20" height="16" aria-hidden="true"><rect x="0" y="0" width="10" height="1"></rect><rect x="0" y="7" width="10" height="1"></rect><rect x="0" y="0" width="1" height="8"></rect><rect x="9" y="0" width="1" height="8"></rect><rect x="3" y="3" width="4" height="1"></rect><rect x="2" y="5" width="6" height="1"></rect></svg>
+        <span class="code"></span>
+        <svg class="cr" viewBox="0 0 5 3" width="10" height="6" aria-hidden="true"><rect x="0" y="0" width="5" height="1"></rect><rect x="1" y="1" width="3" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></svg>
+      </button>
+      <span class="tip" role="tooltip"><i></i><span data-i18n="translateInto">Translate into</span></span>
+    </span>
+    <span class="b end" id="bsw">
+      <button class="sw" id="sw" type="button" role="switch" aria-checked="false" aria-label="Turn translation on">
+        <span class="kn"><svg class="ic" viewBox="0 0 10 10" width="20" height="20" aria-hidden="true"><rect x="4" y="0" width="2" height="5"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="7" y="0" width="1" height="1"></rect><rect x="1" y="1" width="1" height="1"></rect><rect x="8" y="1" width="1" height="1"></rect><rect x="0" y="2" width="1" height="6"></rect><rect x="9" y="2" width="1" height="6"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="8" y="8" width="1" height="1"></rect><rect x="2" y="9" width="6" height="1"></rect></svg></span>
+      </button>
+      <span class="tip r" role="tooltip"><i></i><span>Turn translation on</span></span>
+    </span>
+  </div>
+
+  <!-- Список языков: код и самоназвание. Строит graphite.js. -->
+  <div class="menu" id="menu" hidden><div class="ls" role="listbox"></div><i class="sb" hidden></i></div>
+
+  <!-- Что мешает работать: ошибка, качается или не скачалась пара перевода. -->
+  <div class="note" id="note" hidden>
+    <b class="bang" aria-hidden="true">!</b><span class="say"></span>
+    <span class="b" id="bdl" hidden>
+      <button class="lg" id="dl" type="button" aria-label="Try again" data-i18n-aria="dlRetry">
+        <svg class="ic" viewBox="0 0 8 8" width="16" height="16" aria-hidden="true"><rect x="2" y="0" width="1" height="1"></rect><rect x="3" y="0" width="1" height="1"></rect><rect x="4" y="0" width="1" height="1"></rect><rect x="6" y="0" width="1" height="1"></rect><rect x="1" y="1" width="1" height="1"></rect><rect x="5" y="1" width="1" height="1"></rect><rect x="6" y="1" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="4" y="2" width="1" height="1"></rect><rect x="5" y="2" width="1" height="1"></rect><rect x="6" y="2" width="1" height="1"></rect><rect x="0" y="3" width="1" height="1"></rect><rect x="0" y="4" width="1" height="1"></rect><rect x="7" y="4" width="1" height="1"></rect><rect x="0" y="5" width="1" height="1"></rect><rect x="7" y="5" width="1" height="1"></rect><rect x="1" y="6" width="1" height="1"></rect><rect x="6" y="6" width="1" height="1"></rect><rect x="2" y="7" width="1" height="1"></rect><rect x="3" y="7" width="1" height="1"></rect><rect x="4" y="7" width="1" height="1"></rect><rect x="5" y="7" width="1" height="1"></rect></svg>
+      </button>
+      <span class="tip r" role="tooltip"><i></i><span data-i18n="dlRetry">Try again</span></span>
+    </span>
+    <span class="b" id="bno" hidden>
+      <button class="lg" id="no" type="button" aria-label="Close">
+        <svg class="ic" viewBox="0 0 7 7" width="16" height="16" aria-hidden="true"><rect x="0" y="0" width="1" height="1"></rect><rect x="6" y="0" width="1" height="1"></rect><rect x="1" y="1" width="1" height="1"></rect><rect x="5" y="1" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect><rect x="4" y="2" width="1" height="1"></rect><rect x="3" y="3" width="1" height="1"></rect><rect x="2" y="4" width="1" height="1"></rect><rect x="4" y="4" width="1" height="1"></rect><rect x="1" y="5" width="1" height="1"></rect><rect x="5" y="5" width="1" height="1"></rect><rect x="0" y="6" width="1" height="1"></rect><rect x="6" y="6" width="1" height="1"></rect></svg>
+      </button>
+      <span class="tip r" role="tooltip"><i></i><span>Close</span></span>
+    </span>
+    <span class="ring" id="ring" role="progressbar" aria-label="Downloading translation pack" data-i18n-aria="dlPackBusy" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden>
+      <svg viewBox="0 0 11 11" width="22" height="22" aria-hidden="true"></svg>
+    </span>
+  </div>
+
+  <!-- Лента. #hear внутри неё, под строками: курсор встаёт ровно там, где
+       появится следующая строка, и место под себя держит всегда. -->
+  <div class="view">
+    <div class="fade" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+    <div class="rows" aria-live="polite"></div>
+    <div class="row hear off" id="hear" aria-hidden="true"><i></i></div>
+    <!-- Включили, а речи ещё не было: крупно, простыми словами, что ждём. -->
+    <div class="wait" id="wait" role="status" hidden>
+      <b data-i18n="waitTitle">WAITING FOR SOMEONE TO SPEAK</b>
+      <span data-i18n="waitBody">Play anything with speech in this tab. The translation will show here.</span>
+    </div>
+    <!-- Слушаем другую вкладку, а панель видна здесь: браузер её не закрыл.
+         Вместо всего — где субтитры (имя вкладки) и кнопка перенести их сюда. -->
+    <div class="away" id="away" hidden>
+      <b data-i18n="awayTitle">SUBTITLES ARE ON ANOTHER TAB</b>
+      <span class="tab" id="awayTab" hidden>
+        <svg class="ic" viewBox="0 0 9 8" width="18" height="16" aria-hidden="true"><rect x="0" y="2" width="2" height="4"></rect><rect x="2" y="1" width="1" height="6"></rect><rect x="3" y="0" width="1" height="8"></rect><rect x="5" y="2" width="1" height="1"></rect><rect x="6" y="3" width="1" height="2"></rect><rect x="5" y="5" width="1" height="1"></rect><rect x="7" y="0" width="1" height="1"></rect><rect x="8" y="1" width="1" height="6"></rect><rect x="7" y="7" width="1" height="1"></rect></svg>
+        <span></span>
+      </span>
+      <span class="b"><button class="lg" id="awayGo" type="button" data-i18n="awayGo">Listen here</button></span>
+      <!-- Ключа звука не дали: без клика по значку на этой вкладке Chrome его не даёт. -->
+      <span class="why" id="awayWhy" data-i18n="awayFail" hidden>Click the extension icon</span>
+    </div>
+  </div>
+  <div class="orig"></div>
+
+
+  <!-- Настройки: плитки над низом, по шестерёнке. В плитке название и под ним
+       коротко, что делает; справа переключатель. -->
+  <div class="sheet" id="sheet" role="dialog" aria-label="Settings" data-i18n-aria="settings" hidden>
+    <div class="tile"><div class="opt"><span class="lab" id="uiLab"><b data-i18n="uiTitle">Interface language</b><small id="uiSay">English</small></span>
+      <button class="lg" id="ui" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="uiLab"><span class="code">EN</span><svg class="cr" viewBox="0 0 5 3" width="10" height="6" aria-hidden="true"><rect x="0" y="0" width="5" height="1"></rect><rect x="1" y="1" width="3" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></svg></button></div></div>
+    <div class="tile"><div class="opt">
+      <span class="lab" id="ogLab"><b data-i18n="origTitle">Original text</b><small data-i18n="origSay">Show the source line above the translation</small></span>
+      <button class="tg" id="og" type="button" role="switch" aria-checked="false" aria-labelledby="ogLab"><i></i></button>
+    </div></div>
+    <div class="tile"><div class="opt">
+      <span class="lab" id="asLab"><b data-i18n="asTitle">Autosave</b><small id="asSay">Save subtitles to Downloads</small></span>
+      <button class="tg" id="as" type="button" role="switch" aria-checked="false" aria-labelledby="asLab"><i></i></button>
+    </div>
+    <div class="more" id="asMore" hidden><button class="lg" id="asShow" type="button" data-i18n="asShow">Show file</button></div></div>
+    <div class="tile"><div class="opt"><span class="lab" id="devLab"><b data-i18n="devTitle">Compute</b><small id="devSay">Where the speech model runs</small></span>
+      <span class="seg" role="radiogroup" aria-labelledby="devLab"><button type="button" role="radio" data-dev="cpu" aria-checked="true">CPU</button><button type="button" role="radio" data-dev="gpu" aria-checked="false">GPU</button></span></div></div>
+  </div>
+
+  <!-- Низ: настройки, субтитры поверх страницы, оценка. Текст ленты
+       копируется выделением, оригинал вместе с переводом. -->
+  <div class="ft">
+    <span class="b" id="bset">
+      <button class="lg sq" id="set" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Settings" data-i18n-aria="settings"><svg class="ic" viewBox="0 0 18 18" width="18" height="18" aria-hidden="true" shape-rendering="crispEdges"><rect x="7" y="0" width="4" height="1"></rect><rect x="2" y="1" width="2" height="1"></rect><rect x="7" y="1" width="4" height="1"></rect><rect x="14" y="1" width="2" height="1"></rect><rect x="1" y="2" width="4" height="1"></rect><rect x="6" y="2" width="6" height="1"></rect><rect x="13" y="2" width="4" height="1"></rect><rect x="2" y="3" width="14" height="1"></rect><rect x="2" y="4" width="14" height="1"></rect><rect x="2" y="5" width="14" height="1"></rect><rect x="2" y="6" width="5" height="1"></rect><rect x="11" y="6" width="5" height="1"></rect><rect x="0" y="7" width="6" height="1"></rect><rect x="12" y="7" width="6" height="1"></rect><rect x="0" y="8" width="6" height="1"></rect><rect x="12" y="8" width="6" height="1"></rect><rect x="0" y="9" width="6" height="1"></rect><rect x="12" y="9" width="6" height="1"></rect><rect x="0" y="10" width="6" height="1"></rect><rect x="12" y="10" width="6" height="1"></rect><rect x="2" y="11" width="5" height="1"></rect><rect x="11" y="11" width="5" height="1"></rect><rect x="2" y="12" width="14" height="1"></rect><rect x="2" y="13" width="14" height="1"></rect><rect x="2" y="14" width="14" height="1"></rect><rect x="1" y="15" width="4" height="1"></rect><rect x="6" y="15" width="6" height="1"></rect><rect x="13" y="15" width="4" height="1"></rect><rect x="2" y="16" width="2" height="1"></rect><rect x="7" y="16" width="4" height="1"></rect><rect x="14" y="16" width="2" height="1"></rect><rect x="7" y="17" width="4" height="1"></rect></svg></button>
+      <span class="tip l up" role="tooltip"><span data-i18n="settings">Settings</span><i></i></span>
+    </span>
+    <span class="b" id="bovl">
+      <button class="lg sq" id="ovl" type="button" aria-pressed="false" aria-label="Subtitles over the page" data-i18n-aria="ovlLabel"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="0" y="1" width="9" height="1"></rect><rect x="0" y="7" width="9" height="1"></rect><rect x="0" y="2" width="1" height="5"></rect><rect x="8" y="2" width="1" height="5"></rect><rect x="4" y="4" width="3" height="2"></rect></svg></button>
+      <span class="tip l up" role="tooltip"><span>Overlay</span><i></i></span>
+    </span>
+    <span class="b" id="bcopy">
+      <button class="lg sq" id="copy" type="button" aria-label="Copy all subtitles to the clipboard" data-i18n-aria="copyLabel"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="0" y="0" width="6" height="1"></rect><rect x="0" y="1" width="1" height="5"></rect><rect x="5" y="1" width="1" height="2"></rect><rect x="1" y="5" width="2" height="1"></rect><rect x="3" y="3" width="6" height="1"></rect><rect x="3" y="8" width="6" height="1"></rect><rect x="3" y="4" width="1" height="4"></rect><rect x="8" y="4" width="1" height="4"></rect></svg></button>
+      <span class="tip l up" role="tooltip"><span>Copy subtitles</span><i></i></span>
+    </span>
+    <span class="b end" id="brate">
+      <span class="stars" role="group" aria-label="Rate the extension" data-i18n-aria="rateLabel">
+        <button class="st" type="button" data-n="1" aria-label="1/5"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="4" y="0" width="1" height="1"></rect><rect x="3" y="1" width="3" height="2"></rect><rect x="0" y="3" width="9" height="1"></rect><rect x="1" y="4" width="7" height="1"></rect><rect x="2" y="5" width="5" height="1"></rect><rect x="2" y="6" width="2" height="1"></rect><rect x="5" y="6" width="2" height="1"></rect><rect x="1" y="7" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="7" y="8" width="1" height="1"></rect></svg></button>
+        <button class="st" type="button" data-n="2" aria-label="2/5"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="4" y="0" width="1" height="1"></rect><rect x="3" y="1" width="3" height="2"></rect><rect x="0" y="3" width="9" height="1"></rect><rect x="1" y="4" width="7" height="1"></rect><rect x="2" y="5" width="5" height="1"></rect><rect x="2" y="6" width="2" height="1"></rect><rect x="5" y="6" width="2" height="1"></rect><rect x="1" y="7" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="7" y="8" width="1" height="1"></rect></svg></button>
+        <button class="st" type="button" data-n="3" aria-label="3/5"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="4" y="0" width="1" height="1"></rect><rect x="3" y="1" width="3" height="2"></rect><rect x="0" y="3" width="9" height="1"></rect><rect x="1" y="4" width="7" height="1"></rect><rect x="2" y="5" width="5" height="1"></rect><rect x="2" y="6" width="2" height="1"></rect><rect x="5" y="6" width="2" height="1"></rect><rect x="1" y="7" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="7" y="8" width="1" height="1"></rect></svg></button>
+        <button class="st" type="button" data-n="4" aria-label="4/5"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="4" y="0" width="1" height="1"></rect><rect x="3" y="1" width="3" height="2"></rect><rect x="0" y="3" width="9" height="1"></rect><rect x="1" y="4" width="7" height="1"></rect><rect x="2" y="5" width="5" height="1"></rect><rect x="2" y="6" width="2" height="1"></rect><rect x="5" y="6" width="2" height="1"></rect><rect x="1" y="7" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="7" y="8" width="1" height="1"></rect></svg></button>
+        <button class="st" type="button" data-n="5" aria-label="5/5"><svg class="ic" viewBox="0 0 9 9" width="18" height="18" aria-hidden="true"><rect x="4" y="0" width="1" height="1"></rect><rect x="3" y="1" width="3" height="2"></rect><rect x="0" y="3" width="9" height="1"></rect><rect x="1" y="4" width="7" height="1"></rect><rect x="2" y="5" width="5" height="1"></rect><rect x="2" y="6" width="2" height="1"></rect><rect x="5" y="6" width="2" height="1"></rect><rect x="1" y="7" width="2" height="1"></rect><rect x="6" y="7" width="2" height="1"></rect><rect x="1" y="8" width="1" height="1"></rect><rect x="7" y="8" width="1" height="1"></rect></svg></button>
+      </span>
+      <span class="tip r up" role="tooltip"><span>Rate the extension</span><i></i></span>
+    </span>
+  </div>
+
+  <!-- То, чем sidepanel.js пользуется, но чего в графитовой панели не видно:
+       кнопки старой вёрстки нажимает graphite.js, по шапке читает состояние. -->
+  <div class="legacy" hidden>
+    <div class="head"><span class="stage"></span></div>
+    <div id="bar"><i></i></div>
+    <button id="go" type="button"></button>
+    <button id="pack" type="button" hidden></button>
+    <button id="packno" type="button" hidden></button>
+    <details id="cfg">
+      <select id="source"><option value="auto">auto</option></select>
+      <select id="target"></select>
+      <input type="checkbox" id="showOriginal">
+    </details>
+    <div id="perf"></div>
+  </div>
+
+  <script type="module" src="graphite.js"></script>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

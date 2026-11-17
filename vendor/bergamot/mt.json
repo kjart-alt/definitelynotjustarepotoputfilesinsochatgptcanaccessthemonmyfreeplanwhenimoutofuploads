@@ -1,0 +1,2789 @@
+{
+ "base": "https://huggingface.co/serzhserg98/marian-mt-int8/resolve/b21fc91e520da7708fed08b1ae4412eec120c63e",
+ "pairs": {
+  "af-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.afen.s2t.bin.gz": [
+     2083865,
+     "bdb20cb9a73d4fae7b85b998e4cad6ec1312e76d5df5a2d43a7c9c58c037e978",
+     4082680,
+     "c1df823cdd116180ecb8c22b3a76e8f6cb7d0eb9df55363fa2f826e5c194134e"
+    ],
+    "model.afen.intgemm.alphas.bin.gz": [
+     23469694,
+     "90dd279b60e169bb522328a495cb849fefe9eff050b4f3b8346750fc3472ac31",
+     31561787,
+     "d43baa7ab565a6cdc2bc230a4ab6fcaf7b4a871e53e42cc7128e55871ef36086"
+    ],
+    "vocab.afen.spm.gz": [
+     406733,
+     "c7a14f97d84681da7e4cd6bc188c29e46c128a9bc41e75432063867222d3813d",
+     809319,
+     "b103314260d3979df36ad51a51095d81f5b306619a2543451617959822edacda"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ar-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.aren.s2t.bin.gz": [
+     2199773,
+     "f08dd4ee8b637ee7f282fb16372d9e16f088598be8a6b6aeca6ed857c2a88dd6",
+     4627200,
+     "4b45f14dbea40d368093a13563fc1ca48457ee70c1291c82b206f3baff210081"
+    ],
+    "model.aren.intgemm.alphas.bin.gz": [
+     23219525,
+     "ba03452a070453647a0e2ce0bca153570af318371bed07e9d5561af5ef05537e",
+     31561787,
+     "7b7af0282dc5f4d8805b9a298c2fa828967e3f09ca10f1942ebeea0b2cfc12fa"
+    ],
+    "vocab.aren.spm.gz": [
+     414091,
+     "49529c522878e7ef8a35278eb1981c48257fd8432c81aa5b663665c5b27edbe9",
+     860035,
+     "51b4ee3f828d10015464523d0b4f5a6c086b0b2a9bde716a581001cf6c260366"
+    ]
+   },
+   "version": "3.0"
+  },
+  "az-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.azen.s2t.bin.gz": [
+     2196124,
+     "0718643127d5ac3f3cf8bb0124c570927fa538e9e971f662117b971cd5137fc6",
+     4820648,
+     "d534a8a29537e2539cac09d23360f27291765a030d424e108b9b0cabaa593672"
+    ],
+    "model.azen.intgemm.alphas.bin.gz": [
+     23061082,
+     "a031ef019b018bd16a4a058aa97eec559289a9372bc6f97b7fdb9b77a0a53482",
+     31561787,
+     "21d16602a6b21738d2f750e918bc369b01d83e3d11d4ad1f9ce0a9c99599f50c"
+    ],
+    "vocab.azen.spm.gz": [
+     418366,
+     "56713df3ba26f9196ac16b0d6d7563ed903ede10cbb84bdb0ead7a16d7f3dfa5",
+     835773,
+     "9ae0beed517ad39a95b4e1ae95be4ddfdeba8b004139886d40a3a50874e16aa6"
+    ]
+   },
+   "version": "3.1"
+  },
+  "be-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.been.s2t.bin.gz": [
+     2122712,
+     "bb531da85e367d6da4ce0b641a12782cdf853ced5b7c9b14e024aabe9b76a5bf",
+     4484400,
+     "2a18d88a7365ae7f6cd5786877f483ce17fb89e15c66d2bb0f38e55ff669393c"
+    ],
+    "model.been.intgemm.alphas.bin.gz": [
+     22652978,
+     "2ecfd3a175fd468a932c6d8006801134db57ebe6ba91ed10efb550ef10dc47f9",
+     31561787,
+     "bd7148a6eef3df7d631f4ad1ebc01cd5770404a224c3c35eb54a901ac5340563"
+    ],
+    "vocab.been.spm.gz": [
+     433284,
+     "e6a2c07ff7179d22ce77be02d29e14e4e124fa5850a7f5afe31572d94b6489d6",
+     937488,
+     "57157545394922bafc52ec143923d56b3fe59cb8101191bb2293e0d701aec731"
+    ]
+   },
+   "version": "3.1"
+  },
+  "bg-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.bgen.s2t.bin.gz": [
+     2130620,
+     "ee80610cd9b2e241af5bd095ebae790c69d96dc90f0c194624b4130423fff7c4",
+     4355920,
+     "e661dfdd88aa9ff9606f237a60c910d97c2e710960199589579f628c5d8aa899"
+    ],
+    "model.bgen.intgemm.alphas.bin.gz": [
+     22390369,
+     "c09102d192629e9bb96cb81acd11ae5c545284e3721892f80f5ee968666fd220",
+     31561787,
+     "78f7e6e1435cc2d4a29cf597f493187fe29ddb9ce9d3766c287e2e6d37052d01"
+    ],
+    "vocab.bgen.spm.gz": [
+     432231,
+     "7ecb8fa14279e178c4b0ee8787f3a092df50b70b13993709249d138172ead726",
+     922482,
+     "4bafad5fcc0e771ed82233d1e99d69dcb96487b430702f7e688615c8a61f3df4"
+    ]
+   },
+   "version": "3.0"
+  },
+  "bn-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.bnen.s2t.bin.gz": [
+     2201383,
+     "804096246e3f412d6812a5040026436463cc8c96fba965ea63a449eae93481c0",
+     4793596,
+     "aea901a6bd8722962551c0349b8570af684444028b62bbff465be9931e6e9800"
+    ],
+    "model.bnen.intgemm.alphas.bin.gz": [
+     12662114,
+     "7d40338d40f5b7c837a8fe70a7f88d87737df277fd6aaf5c3b58379b095b7f8b",
+     17141051,
+     "14c1d9e92918e8d04cb0ed351ae386c3b5d5c62a6dc601d9515f4c7e6c2a3a56"
+    ],
+    "vocab.bnen.spm.gz": [
+     432707,
+     "a48f8c1f8a187611272c8d504751a1ef96e0be42301c4f8c99903ae7c2b39e2f",
+     981300,
+     "8a6a4de992ccd47bae4227ec6420866374137d6cc88ed6e8b2f16b36322a9d37"
+    ]
+   },
+   "version": "3.0"
+  },
+  "bs-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.bsen.s2t.bin.gz": [
+     2506664,
+     "8e2ae6400a3db9fac936317ea23682f59bb7f8e93762c77f2cc3bef172599353",
+     5155408,
+     "dccff06320cb87aaa6f93c246038b453d0d0c6f47fa3acd1162f104ac6a2c43f"
+    ],
+    "model.bsen.intgemm.alphas.bin.gz": [
+     22944804,
+     "bbb17fd1e946d6b291264c15548e15482d2b0aededdabedfdce9ae074b33deb5",
+     31561787,
+     "744c61ec0b987c44717f192fcebda7c2a1ac34f5cbfb56672771d28ff79c82c7"
+    ],
+    "vocab.bsen.spm.gz": [
+     409420,
+     "51ba0bf04b4c8c52d6bdf7b053d2de99f421b16b8bd485d0b0068b72ac1a43b4",
+     817335,
+     "320561e2cef014a6d626a64822add3a387c91f609f23ea3b7f421d194075c14c"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ca-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.caen.s2t.bin.gz": [
+     2197271,
+     "d8037f63475d99b1715744c058e1202a25c074ffbc43cbb2ac01cdb00ab5c9d7",
+     4359552,
+     "74880047539925630601d61aa6c29a0672046236ca6cf33eeaf6f6f6690e914e"
+    ],
+    "model.caen.intgemm.alphas.bin.gz": [
+     22784173,
+     "334107239b046107b32f17f88e8823930d24fa5363717d43482ad969a95810e4",
+     31561787,
+     "b7f9c70823052f60c257eb1c4eff893abea3648aa9d1c23c8774e1e5ef061434"
+    ],
+    "vocab.caen.spm.gz": [
+     408356,
+     "a9f4e4dd6e7ce827b7f9e78e4d735ac6f9dc38b775326c5775f33407d11e29ad",
+     810273,
+     "6d22da90905873c2793d0805e34e5c27901b16e7e7a7a427696696f67dfe1f0e"
+    ]
+   },
+   "version": "3.0"
+  },
+  "cs-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.csen.s2t.bin.gz": [
+     2423705,
+     "13d9c79087c6153174b5b65268773e0415907dd2ff3eab7ffcdc58f5e5b36428",
+     4990588,
+     "eba6bd9575251525f1941640ea0b6527a06e72a46421579eafea04d635ee20a8"
+    ],
+    "model.csen.intgemm.alphas.bin.gz": [
+     22824837,
+     "9aa1d24fbeff9da47bb2daa33bbb71f2250f4262680f2c427eb4d438147c7228",
+     31561787,
+     "c815273b31074492eaab0ccd78d33d7ac16f94088707ab2492abaedcb9ee0b75"
+    ],
+    "vocab.csen.spm.gz": [
+     412352,
+     "e42e55ea8142fdfaa4505171ec2660000310741827c95c569d2f40ce8fe94802",
+     815154,
+     "ee4b8ce15c8e1237c5f7a2d04741341beb0a5d5c09820f7ec08f13ee2b212755"
+    ]
+   },
+   "version": "3.0"
+  },
+  "da-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.daen.s2t.bin.gz": [
+     2112877,
+     "d311d20382234a7a384167e163c1fb4f9a6122bef6efeeb024d4a83706ae6626",
+     4489412,
+     "e5f50fba646e0d3cedf2957575aa84c3bdca6798ce32ccd63c956fc043d774a3"
+    ],
+    "model.daen.intgemm.alphas.bin.gz": [
+     12524891,
+     "ca5f870be3be4422e2977f2c74de8b91be031fcf6ac810ee7eb0b3169258dadf",
+     17141051,
+     "2c1ace24220c905404bbb1de14bfeda8a391ef8d6c56f3b193a9d3e340d99b12"
+    ],
+    "vocab.daen.spm.gz": [
+     398601,
+     "ff86c64ff9a232d1eb3c7df7b8993a8e41e97af1543b6e32db64c8040ee2d763",
+     796018,
+     "b9392fcd9c53b802628d33a160f6eb52ca3d25a07ec9e015ab93b6bd5c7e8033"
+    ]
+   },
+   "version": "3.0"
+  },
+  "de-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.deen.s2t.bin.gz": [
+     2560314,
+     "91ba28f69d422dc472b8b8c59afa2913b3c0760c3e37dab0f2074e4c2bbdd7a1",
+     4945796,
+     "113b98460468360cca68c042e1cddf49c4e1931cbb975ed04349c9a3bd607010"
+    ],
+    "model.deen.intgemm.alphas.bin.gz": [
+     22397635,
+     "c69034f788f1fad14afac4071d976cfde75cabc6247c34062bf687eb4a8f7537",
+     31561787,
+     "3e6f7c2c2425d10824797270b382bee718ff34af2cab9308841c82ca46dc6f20"
+    ],
+    "vocab.deen.spm.gz": [
+     413337,
+     "42a2805ac7b62429188f6db2bfcfbc8ab5dfac69172c285a5cde325e4358bc55",
+     810073,
+     "69f730becafa48e3bb2c244eab66456877c08959a02f2bd5519b5a3088b62f9c"
+    ]
+   },
+   "version": "3.0"
+  },
+  "el-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.elen.s2t.bin.gz": [
+     1809828,
+     "417d42fda9e58131393963d764fd6b0203b19932b1bff7ce647e8322909b234d",
+     4295860,
+     "2c969b069b3d230feddd17db2d74eb658a9b33b960d2d40adbca5496c9784e85"
+    ],
+    "model.elen.intgemm.alphas.bin.gz": [
+     12693606,
+     "e2aa92fedd44e6d4e82e7cf2a461f78d7390e1128a34805c5ffd07fe9697767e",
+     17141051,
+     "0a43c3716156061494d995d0c88113e789f8d919e0c88a15bc1ad360e0482a8c"
+    ],
+    "vocab.elen.spm.gz": [
+     417223,
+     "c016db19021982d1982e99717c85f84724252d22a02b4b9434fe65ba286c79d8",
+     894960,
+     "e1a1298cc2cf3968f3d7cc3b36bc463a4e1bf154272e8fb2f15142b54edc4349"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-af": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enaf.s2t.bin.gz": [
+     1632727,
+     "fd03fac71691bcfa8c00e45832df6ec2aec557e4113f9028115eee46f737a7cf",
+     3193340,
+     "591e3465c6e5e8920e911cae36e1d92c61abe92b2d5ef9bf2f1d8b5825bba20f"
+    ],
+    "model.enaf.intgemm.alphas.bin.gz": [
+     23552925,
+     "2606c1b730285d72252403bca0f5cca2fe48a6a926c01a5105d5565eb63b58b5",
+     31561787,
+     "afc1dcb25774e61f513fe722e037744a18c23063ba799bb01f5cdec5cc79b502"
+    ],
+    "vocab.enaf.spm.gz": [
+     407407,
+     "db99e26ad6e3c3fc50e79e4ead3802b480a4288eb8fbeb0f7a0e948040b1dee1",
+     809195,
+     "8d19c43df2142696227eb3462c6693bbc8c62cbd47b9a7372f86df2698864438"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ar": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enar.s2t.bin.gz": [
+     1601523,
+     "54ea5bfa8654721f1f1eec13cf1cabe4c6ef69e6c664f299348f6a033408e353",
+     3139692,
+     "2b7194817c5dd9225ca90c0d908cc92e1d6d1f45625781a5feb037ac568d6a61"
+    ],
+    "model.enar.intgemm.alphas.bin.gz": [
+     22848507,
+     "65b2120c7252de4ab874b3b2dcfcd5297961eb618fb505a9de63af011ac72503",
+     31561787,
+     "ae659d7045fc2e5d6ba50583586a5d94ee4358d92c019847e37b57a0e627faa8"
+    ],
+    "vocab.enar.spm.gz": [
+     416537,
+     "86e1abc3a70822e99146f152afe70c20ac0b65f8bf7c5490bd92129eb505c396",
+     863591,
+     "8d93c54aa5e2044c416ec680b5ff9af0227bd698521666e8b1a1ea1b041fbae8"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-az": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enaz.s2t.bin.gz": [
+     1636995,
+     "d39a96abfc78823d5c47fe9bc9fa2c92ef094c95c14f82b901d5ed47a846dd7c",
+     3166552,
+     "6b2f36c13a98c677af7a5f4e0087636fe2af44e004dd142add1ac2207cfa8ad1"
+    ],
+    "model.enaz.intgemm.alphas.bin.gz": [
+     23030821,
+     "6a2f2732d6f9ca6e648655182f4e1db3b2753e63a3f7aae9d597cf9c4d1dc976",
+     31561787,
+     "fcf1f5f36dd586db7078e938252f17ecb90ae6f2d1b28952fc3878738f81336a"
+    ],
+    "vocab.enaz.spm.gz": [
+     419934,
+     "5c40555a99f350c7c1ad7e37c0fbbd9b8ccabfa4e82f3a470532ef8f99ecec6c",
+     840767,
+     "ebe0ebd2e652a03e2f23c2209b8c297930df2c5da9391c4afe7762ec04af899a"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-be": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enbe.s2t.bin.gz": [
+     1312592,
+     "6ac17e5ee6fe838ad23231d18bee89a99a5b6a4be9d6fdd9a4163afb85d18307",
+     2623776,
+     "992bd4fe0c88dc5693515c5e872459c32bc43329db775d3d3349d480449354ec"
+    ],
+    "model.enbe.intgemm.alphas.bin.gz": [
+     22841788,
+     "a5c4312201d585db92d9f5dc05da1c8c2b5bdc5449b609e5ad239b59f1393b0f",
+     31561787,
+     "88fb3a6e2cc4b936313596eef445a548e63e1ca3ef0dfa54b88229c3ce877116"
+    ],
+    "vocab.enbe.spm.gz": [
+     435440,
+     "7d702c0d626a2c0cac8b675523ef75b0b2d14abdbbdcf3bb70bab054f98c7e16",
+     941727,
+     "19981e67e5359fef1cd6c08a868a42c17b010f1c62bfbf48037d7be55c0e2756"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-bg": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enbg.s2t.bin.gz": [
+     1513624,
+     "43f831f9698ee75463ba9775777cda698ea0b2410403a8e429bc5a736368257b",
+     3075948,
+     "93d4ca4412db269cc4164cbfa04c08edd0f65690c8264d6215a0522d4a13ec1a"
+    ],
+    "model.enbg.intgemm.alphas.bin.gz": [
+     23426530,
+     "b8334a9cd366e51122d36ef52b63bb4dbc10823d1f7e3c47ff84fe7b28d3ffa2",
+     31561787,
+     "e2b30db98ac6706efc893067a74e51f36f015a8f820fe8a4f0f5052fa6a22f30"
+    ],
+    "vocab.enbg.spm.gz": [
+     432231,
+     "7ecb8fa14279e178c4b0ee8787f3a092df50b70b13993709249d138172ead726",
+     922482,
+     "4bafad5fcc0e771ed82233d1e99d69dcb96487b430702f7e688615c8a61f3df4"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-bn": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enbn.s2t.bin.gz": [
+     1563479,
+     "f29a500a623b9e894938524211ecd71f6c376384debfb6cea587a49e768d4684",
+     3207488,
+     "74ad4234a0a9cf57b21d99b34fefc14f7c731d7e76da7940eb0155c13a234b5e"
+    ],
+    "model.enbn.intgemm.alphas.bin.gz": [
+     12817804,
+     "81d0466012393f66f8f051b17a486594d6df86bfe597c45c48bc5bbce75c118f",
+     17141051,
+     "b63c8d5f8fdc1fcb8bbb2d20c751faab94af67ee1822427665119c93a11f6596"
+    ],
+    "vocab.enbn.spm.gz": [
+     432566,
+     "4f19db8c58dc752795477b1b68d967044b1d773286c688d738b9919d0ffe22ef",
+     981226,
+     "8895bebb290adc2a5ef46710d81be13d341883a8c6c233e0c060f968df0deef4"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-bs": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enbs.s2t.bin.gz": [
+     1647429,
+     "27fb342e5fd8d9e5ebed6b4bd796d61b9e2fe645e3117952a2a32b5c24d3b3cc",
+     3214628,
+     "6847523f4d5df9425cda606e73f404c07e19452dac7659bdcc92743c46cba3c0"
+    ],
+    "model.enbs.intgemm.alphas.bin.gz": [
+     22928086,
+     "69af76d90486ef156f5794fca1d8b20470aa3bda91eb20c42935462ab77df931",
+     31561787,
+     "27575113fffad6c45a0bad36bd1823c4f319ed30f65ec134815b67bdae0d9f8d"
+    ],
+    "vocab.enbs.spm.gz": [
+     411664,
+     "bba186a49c83bb9196c07d015eac51fd418faa01c32d65d968f2fda1bb9b5afc",
+     823444,
+     "dfed9c3e08e85a22feac7748a20fa981dca94f358115af2f45d704b9cc944cc8"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ca": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enca.s2t.bin.gz": [
+     2033722,
+     "e84307e3c9c6f103cd4c6e41162d33f472375f0e76ed30a60184af44f2f7aa1f",
+     4344092,
+     "8f2151a7fb75454f5167a8df8758ec02ab02c0302893851bad7caa6b729822fb"
+    ],
+    "model.enca.intgemm.alphas.bin.gz": [
+     23166016,
+     "d0604d36cc6fe1567415a75f14dd3fbc9bf52cb6e0939d91e9fb0387afc18140",
+     31561787,
+     "735881c99ff303e55eb2e92a3b86762523d5dd1a4797b2574b851062051426ee"
+    ],
+    "vocab.enca.spm.gz": [
+     408433,
+     "f880e8f6fda7febfb77c692323893146a52b1bfda104cafc19e8c524b3dbdc9d",
+     810653,
+     "64ebcb5f6cb5a954ced615e48a44a85e77a644e4910544014b299b8ee0fa1b1f"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-cs": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.encs.s2t.bin.gz": [
+     1853080,
+     "f2ad1ebe7019a1e7aefe58a3a3261a1fb005498f9835120c5cdffcaee6c9984e",
+     3572436,
+     "699b9b59fe3acbcddf831380024b2e139f2cbe225dce96d59ade2b159318f58b"
+    ],
+    "model.encs.intgemm.alphas.bin.gz": [
+     23184140,
+     "221ee186092abb248d7b4f9737f158126b4c80d287776dbb5668cc06fc7476a4",
+     31561787,
+     "1d7855f91c3e2b8ef79fbea62707d46ceb8a1ad01834ef6dd500f32a7006cc2c"
+    ],
+    "vocab.encs.spm.gz": [
+     412352,
+     "e42e55ea8142fdfaa4505171ec2660000310741827c95c569d2f40ce8fe94802",
+     815154,
+     "ee4b8ce15c8e1237c5f7a2d04741341beb0a5d5c09820f7ec08f13ee2b212755"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-da": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enda.s2t.bin.gz": [
+     1552298,
+     "611c593cd80925ace93ea7265ff70094af1f1427d3cb7afb89cce2a83ceba205",
+     3864788,
+     "d183786cae59a5df06d5b00c58e3ec2a5791d302240a65540fc6a1da2b66eada"
+    ],
+    "model.enda.intgemm.alphas.bin.gz": [
+     12719798,
+     "434da92cdb5997efdd1f966c1d959b599c3ab96dc599bcc0185998bbd267ff42",
+     17141051,
+     "0157ed1162dd5a7a0fc6a3cc86014ec21cb47a8febf77164df24d8921270bb29"
+    ],
+    "vocab.enda.spm.gz": [
+     398189,
+     "2ccef445813d31b17004033d2d5147e6dd24ece71bada4a364a1a31afe6346f6",
+     795349,
+     "b06349522bf053e4a6f01efc4d1450e4fe35717a938a82831988c087229c9619"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-de": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ende.s2t.bin.gz": [
+     2263559,
+     "da45f454246cdf301069fddc5a7d6f9e4d2b310ab306565664b4e0b7dfe90f23",
+     4347672,
+     "7ed39f1cffbd68a27ddf05bbfe068de2060f1d7e69f1a20e27ae923551dd7393"
+    ],
+    "model.ende.intgemm.alphas.bin.gz": [
+     22988585,
+     "9bce9c921290aeec49fdfcfdb17c053e4239af9e66e3ab3f659a6e2d9c8cd4b5",
+     31561787,
+     "8df29d9494d19f47fd5d97c6a73474c6f657e9f81c1a607c431d02befdf3810f"
+    ],
+    "vocab.ende.spm.gz": [
+     413337,
+     "42a2805ac7b62429188f6db2bfcfbc8ab5dfac69172c285a5cde325e4358bc55",
+     810073,
+     "69f730becafa48e3bb2c244eab66456877c08959a02f2bd5519b5a3088b62f9c"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-el": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enel.s2t.bin.gz": [
+     1318626,
+     "3f0213dcf387216a36abed0af9a3b7c1da732d30cfccacdf582b8ba09f8a5e3a",
+     2856724,
+     "c2acd9241eb8a1e5b13a43efa5723628839d6e3b3dc7b93e2f20990a6ab81e24"
+    ],
+    "model.enel.intgemm.alphas.bin.gz": [
+     12806505,
+     "5507fc52ed972680c7dbafbefecce6d7be2c4bcd065513e02f4fde4882c507cd",
+     17141051,
+     "724b358d399c6b23444de36d76e9e2630c7024c29d9e617323b820a11631535a"
+    ],
+    "vocab.enel.spm.gz": [
+     417148,
+     "5df9e0e21a46f8d03bab39ba2b850ae48ec374be0000f40fbb1fc408cab198a0",
+     896168,
+     "0ffc5569d7f400f03539c5fc3e28ff35f1d0381eba0ec866c44aef0c26f3ce5e"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-es": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enes.s2t.bin.gz": [
+     2213495,
+     "fcd68b30f21d60bf6c497ef3af08c7e3f5d1311b297c437ff85c3b4069b6535f",
+     4198436,
+     "7d51237c0a07027dcd61643cfbbb0f8c48597d19907ef53d2cae9d6bec2cf25c"
+    ],
+    "model.enes.intgemm.alphas.bin.gz": [
+     22690446,
+     "a2dc3595dfd4d7398b7d9fb7464073666baa568a779bc08b4cbc1f66d134cba5",
+     31561787,
+     "3b1c399511c01c84c36fae5c0524df44096288efdc8236e182b5c97d7ad2244c"
+    ],
+    "vocab.enes.spm.gz": [
+     408042,
+     "b7c116286f6eece2e4fe0158bdb835f949e7d6620d043f7f6646b020c8452bfd",
+     816054,
+     "5ae254fa9b15aa182e70fd2a6186b1333c63a29a48043a9224c6aa4fcac058ad"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-et": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enet.s2t.bin.gz": [
+     1825584,
+     "ea1ca70bfc3ea06bdf9bbedebda25d53912a04676467a2eaab99a8a02ce095e4",
+     3488368,
+     "259c60582f49449c226a6e5a369481c68322013f367e459e54c595686c05d4d8"
+    ],
+    "model.enet.intgemm.alphas.bin.gz": [
+     22945841,
+     "d71a57810a1588256bf4ab7e083fb0f78c440284319a881cfb65daa333942eb9",
+     31561787,
+     "36bdc87f8d500861a5d286ebd3ea58df530da87e31b8a233f5e9c46c300c281d"
+    ],
+    "vocab.enet.spm.gz": [
+     413938,
+     "f217296da732ffea9de36605560e54625cdc75a95dff734bf2a5baf340779dcc",
+     817574,
+     "89a3deea4ae7d674fb46a4dae39135dd4dfaac9786f2868d0b5bc5c0aca2ef83"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-eu": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.eneu.s2t.bin.gz": [
+     1602015,
+     "51099f409e8a3a08f0106f5ba9bc94ec19b9911afafafad9dabf214690395c54",
+     3149580,
+     "a6a856a89acc6bbf970b6c5e51fe705bee6fe2b8007a3c31ae54ca2c6fd69aad"
+    ],
+    "model.eneu.intgemm.alphas.bin.gz": [
+     23066710,
+     "09cb2649f628e9535f0b7a63943d391c8b51412e1b6eb490c9bc6e1f4f999954",
+     31561787,
+     "f28d03817b718806c9262e3d76960efb8cbd04d0721307c8e23edcae9364150a"
+    ],
+    "vocab.eneu.spm.gz": [
+     409055,
+     "b87aa17d6ff7aa134476ea1ec60404a20655f20b26e431c2d66cad796d7901de",
+     820820,
+     "d0cbd7a04e20c3a45bcf29260967db26a97c4787c03a9d867df0465bc104cec2"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-fa": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enfa.s2t.bin.gz": [
+     1678547,
+     "dd162943c2bf7f6f261bf526962f5c214049ce8b0b4314ab4eaf338dcd85c7e0",
+     3631332,
+     "8542e7fb2bfa3a11b89f8392b8adb0dbbf863cd34569488b7c4535a91c3ae6b4"
+    ],
+    "model.enfa.intgemm.alphas.bin.gz": [
+     13056957,
+     "5b1385163098467095241f64452694ef797e14f5e67dc5f6b67ad79531cfa304",
+     17141051,
+     "456ad3952bcc59d208c76baba4dcef340ee4239416bd760d6fec27f9a16228f8"
+    ],
+    "vocab.enfa.spm.gz": [
+     414456,
+     "73b6d16a22649a1f1816b91f7005457116a5cd0225d63cca671b39d7816ed3a1",
+     843133,
+     "6435d3d9d766159fe192ab90892540b438ad7adb7ab4ea4049f68d0b4cdea3bd"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-fi": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enfi.s2t.bin.gz": [
+     1834092,
+     "7d8c1100330ecfba1e0bef73301c0cf960332c1f42fde9f7dfec72c47a60c57e",
+     3490092,
+     "26e95a87f87e4b0fa9a35524cf9fea691204504453877ba4ac81ccc66af1488c"
+    ],
+    "model.enfi.intgemm.alphas.bin.gz": [
+     22571307,
+     "21767c790d995138797c173d67e27ef3dc0f48fbcde8024588b8fd55213fe0eb",
+     31561787,
+     "88b0caa4cc6980d632801cb2b1950748f1dc43ad2ac83678917ad86c720b5cdd"
+    ],
+    "vocab.enfi.spm.gz": [
+     413560,
+     "36e65049cdbcb4f31285561dc765058c584ff792945ecc772b271431aa4f5ce4",
+     818770,
+     "6a866911427f2916609ae89c7f2f04a78de3fdd8aa183039ecba986635d4f246"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-fr": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enfr.s2t.bin.gz": [
+     2247223,
+     "93d0b2d8edac4b7d2674810f3e8f45e3da7125a0ea5ead6901f1ca45823f5bd8",
+     4372936,
+     "2585ed98d3af0bc949865aedeb390493d591f56870814376e73e4144c41ed059"
+    ],
+    "model.enfr.intgemm.alphas.bin.gz": [
+     23037350,
+     "31640a14b0a3ffa56b5391d848c756fb3021a249e1dc173633c5b5b768db9c9b",
+     31561787,
+     "6322e296d4fecfe395a8d5723da4ec37ecbe6d7613bb1dfcf4b28e2a47498b68"
+    ],
+    "vocab.enfr.spm.gz": [
+     408365,
+     "2375c59a8f30622531cce7a7d8b378417177d86818c6600311501201e6c15230",
+     814404,
+     "783abf3abe075afdf8d85d233994bef2c3a064e935ab1bed946820aff6ac002a"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-gl": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.engl.s2t.bin.gz": [
+     1565126,
+     "8509adffcf7a6fdc653ca6cce59d15a283d2d9ad62091b663b35a3d649ae2410",
+     3007680,
+     "28621d3797a945ca0112c872640686586e77957b5421b0ef95886806b09d8874"
+    ],
+    "model.engl.intgemm.alphas.bin.gz": [
+     23426381,
+     "fa305a838e2c914c696a67246c4e0ba135dbd0aad401fe24c1c17621d74a5c07",
+     31561787,
+     "bec08e5408932c3813ccfb565ab7003d334dd6ca148c9d2bd074e17b8c0be1b1"
+    ],
+    "vocab.engl.spm.gz": [
+     409251,
+     "4994d822ab2d23b46199e830b7bb4f3d66b5192c6440c84bc05cdd80d9f05848",
+     827026,
+     "da044600f961c4c977e747cc9fb8afd4c05829629033d344a575a93807ea1cba"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-gu": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.engu.s2t.bin.gz": [
+     1488414,
+     "16c82e0d9a5afa1a2125d8bb508e075629f31e0e0dc8d463e531780627e89262",
+     3179500,
+     "5699d5f0f6265766c57e8e860596091d16a7ea68e9e181a3310b8b52d79f8b5e"
+    ],
+    "model.engu.intgemm.alphas.bin.gz": [
+     12658318,
+     "356e02b7b27423b7b4d0167973814e2fca88dad7fb97a9cacde3f6726580ba6b",
+     17141051,
+     "0f2c8bc7f13ecb9b89459e8fd9af6d8736e0f6b1c8f8a80f747fcdc030d0a588"
+    ],
+    "vocab.engu.spm.gz": [
+     432005,
+     "32dcef2588fcc21c3825e33cb4e707258bd3558258e1c58471f6d12e7abbc4d4",
+     965095,
+     "74ce11b041bfc527eedded78594498419c781c81a3fcb3384a3485af70cc2325"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-he": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enhe.s2t.bin.gz": [
+     1531121,
+     "72d90a284d034210360950541ab95c0440ed92b325c7066797ae3ace2e0e4a6c",
+     3066048,
+     "8795f4c5e19b4a196c9ed394c275a28a09e5ddbbf47ae16faa4446bf2b8bc7d9"
+    ],
+    "model.enhe.intgemm.alphas.bin.gz": [
+     12973837,
+     "b83fc56e1ab74a39ed7e676c440977af534059bbbdd05bf55919ae02bfac0a4d",
+     17141051,
+     "e37ac6e6f131704c85deb94a657aa20afbb44db2879f44aec9c33a34f4467587"
+    ],
+    "vocab.enhe.spm.gz": [
+     409016,
+     "c6f16f09c9c9565b5d9dd6bf8cdb49ad8ceed362380f7274a71400c7081a2d74",
+     845017,
+     "672b334afa84011200fdaee02c2fc7810910c35ae9ea7619be073c851703ce9e"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-hi": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enhi.s2t.bin.gz": [
+     1643305,
+     "91c4f293faad18918aac7a5acc145b6e3e4dfc21c7509587d43d7b71998b9c0f",
+     3504820,
+     "b473f6fe41cdb7c1dbeeb714fc50314feab77b0af2b2da6f7830ee14492dd847"
+    ],
+    "model.enhi.intgemm.alphas.bin.gz": [
+     12734772,
+     "ef9a52db247a00fe392a5b799b7cf7aaf073bfd5fbc227fbd452edf8eee632af",
+     17141051,
+     "18682fa6aa1c1b2f78a6fcbcb354755094d623e65436ef7821720c5213e11a49"
+    ],
+    "vocab.enhi.spm.gz": [
+     427234,
+     "b74de49c4deb0feae5bcbd9d06d38fea6469a9174dca794c686bbc2b9c73d38f",
+     925360,
+     "8017cbf812bae400794c424699b89de90db06ac7a4ca67a420013a9f68b270c1"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-hr": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enhr.s2t.bin.gz": [
+     1675822,
+     "9eba6aecddbedd508a17f829cbc90fc9ff64533be7538293ee74e01955fd2845",
+     3232644,
+     "70cf1afc8aeb6d7ed7dc269ccdd4e40e2d139a2b1106313c94210d32b14bc845"
+    ],
+    "model.enhr.intgemm.alphas.bin.gz": [
+     22752188,
+     "db4e64f7eee72c0e9e633345b4242dba660a508628c658f791d744367b153983",
+     31561787,
+     "2f34590dff70aec009d3c6e9bee7a4a18aa6a0a1978c7dc49c686eb454b77704"
+    ],
+    "vocab.enhr.spm.gz": [
+     410367,
+     "b44993321d2f1f08cb1ce4332be9ee9d77fa2917c70fcf1a55cec0a688d622d3",
+     820766,
+     "6b86a23aac0ba7aae69218826600afe1c70b3e5830814d9428f7248d23e016f8"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-hu": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enhu.s2t.bin.gz": [
+     1754677,
+     "d4d1099e76a41b4ce2ed3e6c716286a89f63ced4818972cbf57da05741eda1da",
+     3419024,
+     "b1c9763567bfa24082fee43a9c4cc05b8ceada949fa52f6686b11f70ce481238"
+    ],
+    "model.enhu.intgemm.alphas.bin.gz": [
+     22884724,
+     "17825116ab399f683ffd457eef0ea9d8c12b189200a6524c86c0e6062d7224cc",
+     31561787,
+     "0c42f56edca74b3f732a74c64553c47d0005b50cf095f43024601985fab5d461"
+    ],
+    "vocab.enhu.spm.gz": [
+     421116,
+     "3db09cf2c43d1c79377375c294d2624f49eb66ea1760cfec4085d614bd0d4106",
+     832855,
+     "8c3038afc15c5a3f7bb3c6fc4c4962907632b6f6d0ce7444974504bef19ef57b"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-id": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enid.s2t.bin.gz": [
+     1681949,
+     "cc0f83fb014f8aece100021af88d85a37742a2e71673fd5d040c454b7656325e",
+     3515428,
+     "d37f72bcab6e7bc52fd223350f95521b5810bb2486a97275f86077988fced3f4"
+    ],
+    "model.enid.intgemm.alphas.bin.gz": [
+     12499977,
+     "66b7f3debe5ee881c853257dda0dd46b65f899f7f9544713fce34af6743d12bf",
+     17141051,
+     "f81f13eef703a4e0650ffc3138a0f4bab7b6c8bfd173ef1b7bda68d16b8bc7e8"
+    ],
+    "vocab.enid.spm.gz": [
+     378696,
+     "c297ed566c296f02b710cbbc03a68ee512392437e406bec20cd4695ad3963e5b",
+     773211,
+     "61bc7db24d3b6de638a02a280580a273fe0c942ecbe8a8204b2f81978211db22"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-is": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enis.s2t.bin.gz": [
+     1929374,
+     "ba35810edfbe3359ca5499c565557c426725708eb7ec8d3a120062aa1cbf1aaf",
+     3837564,
+     "4927d2bed702141b4ddd8a5e7034b27fb17312fdb7e3cc5f455ccf2e2f6670e0"
+    ],
+    "model.enis.intgemm.alphas.bin.gz": [
+     22579574,
+     "15523a6fd8bd6746e4c400ca14fbfe701569143524f5e5f3cd3699d595533fcd",
+     31561787,
+     "459626236a49158aa555facd23e5f594e2f8416f4ebad32e0548af94c5b1ae0c"
+    ],
+    "vocab.enis.spm.gz": [
+     413487,
+     "784138e85d81172d17efc3659fe00365a95129d0e7606a12f522f831d6ea3b18",
+     809991,
+     "61b2ea10edbe4cc61e36c833cacc2f55778ed9ca860cd382729060634d4b0adb"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-it": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enit.s2t.bin.gz": [
+     2159074,
+     "f90cbbfcc297330573eda110141a390d93ad21da75209b7e01c007d7ac623494",
+     4133192,
+     "8b21914804625b2777dae7fdb636eb78f02a3eb8b7bceaa50f29ac740961da93"
+    ],
+    "model.enit.intgemm.alphas.bin.gz": [
+     23889002,
+     "b85e848091ee32edd0a8022fbe9db1ef88c9201a51c38ba6d242d7c0ef2bccc1",
+     31561787,
+     "248f47568788ecc351da7e5e07064d4153b4f71e011364ae2c931ffeec4d1cc2"
+    ],
+    "vocab.enit.spm.gz": [
+     405425,
+     "c163f3408b0a9b3f07b40fa6f8c6082123501bcdec5ee11cb202700c5324c0b1",
+     812724,
+     "3ef0211d4ae6db21440892f180f2019fe2bfc110a330ffa9d2eca9665e4f2bc5"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ja": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enja.s2t.bin.gz": [
+     2299065,
+     "4490d7e0ef8062d061fa21935a76e8046160cdaf8af9dd92e642d07ec864be65",
+     4128360,
+     "edfb7eb47b98a2689b804ab3614c31b24f1257aa54b1154da3d85e1ae8152d9f"
+    ],
+    "model.enja.intgemm.alphas.bin.gz": [
+     33049222,
+     "3ffa5ad99bf6d296378402dd079aabf6f9148b2d148efd92a8173c707d1da086",
+     43849787,
+     "59ae659f9bb63e4f81f474fe3c03d3f4499434b5f9e779fab7c12a45f31fd562"
+    ],
+    "srcvocab.enja.spm.gz": [
+     403830,
+     "fcc2c32d9e068a35cb6d56da757af97b9e97c66b240104c765f5afa88cac9d99",
+     796275,
+     "970c98d174fc01e0339fbabbf45af36a4be3f26f819ec1a5ea1189f71e091889"
+    ],
+    "trgvocab.enja.spm.gz": [
+     430055,
+     "a5bef3878de17c4bd2b0688e494c8a94759513a0b3a482c92e4dcf01bc6b6e8c",
+     827144,
+     "3b3d9f8f3a034d98d0a476f1794fa79c01e4e98a967ceb6777a66ba2d03ec1e1"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-kn": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enkn.s2t.bin.gz": [
+     1382144,
+     "9bd65f3c1fbd169b45a55c8d45dbd6acc43e268da24fde8e0777122301b3f473",
+     2808304,
+     "94b660f37c9c29a904b48498a7202846faaeef16f30668f356336c29cefc0f63"
+    ],
+    "model.enkn.intgemm.alphas.bin.gz": [
+     13006830,
+     "26051591fd2a196161f2bfb8f903c69b5232b422b9af3f73376a33e1a4255462",
+     17141051,
+     "17a5ddc86e24f62c04aa15272930275812b5c1674bec50a877528680d5834d2d"
+    ],
+    "vocab.enkn.spm.gz": [
+     443746,
+     "ac311125e80112cbd32b3f99266a724b88768d1608efff72443fb436c36ff222",
+     1065180,
+     "1d41f1f6b67a8c29fa3aabbc7758b766bdd9acdbeec7d1277ab60c8e492c8b7a"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ko": {
+   "architecture": "base",
+   "files": {
+    "lex.50.50.enko.s2t.bin.gz": [
+     3634817,
+     "99b70b6b845599b781d18c28151c3fa68a6c938837dca241be1caae6434922c2",
+     6676356,
+     "7734265822ce315c72334ad538e698ab3900ab8e8f04bd43768d0aecad6b6df7"
+    ],
+    "model.enko.intgemm.alphas.bin.gz": [
+     45473670,
+     "e62840d2466a2ba153ebef99356e2962fef6e06e5fd9acb3f058bde3f331500e",
+     59504955,
+     "1c310a79b61b8824b2eb26b045db043d92722f3e66ea06998f7c89f48da9f6bc"
+    ],
+    "vocab.enko.spm.gz": [
+     700163,
+     "e49293e1056abc8cf2cc3902e6f40bffa51688911159869d49205d8de4fd09a9",
+     1406926,
+     "709bf0e425345e0e92ce41ed84348a1296a2107c92bdb6624404450ffecbd1f9"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-lt": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enlt.s2t.bin.gz": [
+     1722121,
+     "9a75f76e8f72470e696745e6db969d4e8de2b515b56edfa67bb7fbbfdd3fb317",
+     3421640,
+     "5972c834218c7beea241dc8fe77c2e577a8d8b4eb3d3dc286d10ad890c64d374"
+    ],
+    "model.enlt.intgemm.alphas.bin.gz": [
+     22857983,
+     "909dc515ac9bd40d66a459157168b25642098d3ad5b84f644e7d1f3214de819d",
+     31561787,
+     "d27c676d9d761c2abfffec83956e32b2923f3f745b56acdbd84c49d888cdc94e"
+    ],
+    "vocab.enlt.spm.gz": [
+     401635,
+     "226fc1ace29f45dfbb61feda95784a82436ad10b0f0c31fbd5481eda3e386df7",
+     806827,
+     "5d38fe70ff4a50368af756b715b69519c9ee064c27cbceeabc90d4e1a10f25a8"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-lv": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enlv.s2t.bin.gz": [
+     1680150,
+     "a02f8a5914479e942ac8173239cae47de396fa94bbb6ce30b35a0aaa8e4fad03",
+     3359096,
+     "d54b9bc278558444c5c25df5ae7339b73eee55cf79705f19fec672b6d55d959c"
+    ],
+    "model.enlv.intgemm.alphas.bin.gz": [
+     23721722,
+     "c00782d97591a4b104bf43dcf148cb0203331afa9bfd2bd3fefee58c0a1e65d3",
+     31561787,
+     "715f9f444dffa0b39e71955c28bffd30afa4cc8300a192ec8fabb766cc5ba11d"
+    ],
+    "vocab.enlv.spm.gz": [
+     406123,
+     "de59bcede5207d0b5f6082abd09c9b94e6f56d986ea56c21c74b729e7abb69b3",
+     816287,
+     "63146b49ce46ba1283b6956e38efdd4899d1a409cad9d2b6a06cbd4e32ca0808"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ml": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enml.s2t.bin.gz": [
+     1244116,
+     "9e503f1037c58c4973ea7922767c8b90af3ccead8fd4f7293cbbc527d0cb496a",
+     2532960,
+     "4a37286742244a130548b79823c9707bc0e56f373361e2cb56402f82e862c2b0"
+    ],
+    "model.enml.intgemm.alphas.bin.gz": [
+     12564983,
+     "47d86c4156c06ae00cec3c377a783781f329bf2fa535a18e6b9f73b5ce75f57e",
+     17141051,
+     "c461749c8315f6417104cf4df32e5063e86cb101203f9629512294c1c8ab5337"
+    ],
+    "vocab.enml.spm.gz": [
+     446958,
+     "e906ec83917bfef0b833b769ac47c7d2176fd13bfbe38aafcdfdcbfb5c085272",
+     1109000,
+     "8282614894087e4ffab325cbdb3aeeba35677f770ef8f253c189b392fe1f4d52"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-mr": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enmr.s2t.bin.gz": [
+     1366702,
+     "8b249b1092f77886e969a602f2b5d3fd20a69b3389738643abb462ee5bdb0203",
+     2731352,
+     "5f343589941c5445e9c27ee2d5329b6da65867590a4df79c09532aeef379bca9"
+    ],
+    "model.enmr.intgemm.alphas.bin.gz": [
+     22890152,
+     "bb28104cd6dac949dc0e05910f03f2e5490d298a98275c82e05e7b3d0f84c269",
+     31561787,
+     "1520f77c2f1c703b6148e4452b376ac28aec1e63c467eedec8a986864827ce8c"
+    ],
+    "vocab.enmr.spm.gz": [
+     438537,
+     "f45ee9458ec63ee992c3a2bce2ab49cd0b8bc3e670d48b2853eb05e0546c57c7",
+     1009700,
+     "f71f279069e19a9a9317fd4fcbdffa6b2c621ee6fcaa369a92046fb7fb572735"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ms": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enms.s2t.bin.gz": [
+     1989583,
+     "d434523a32f35b5e6750904c3c295db030a2219e6a796e5266c5b992ffbe770e",
+     3936428,
+     "be8fec4866c9ed2cf669adaea2e259c4c22f34838032eb0ee117c10fcb968c4c"
+    ],
+    "model.enms.intgemm.alphas.bin.gz": [
+     13037001,
+     "06080df9316af0c2691be62be0f2867ed031b9cfd3137c0ac2f9a8cad7ce5c8e",
+     17141051,
+     "3d6961462ffa711413d513624d7e6399b3560c2b0994daa73b0a45699e657af8"
+    ],
+    "vocab.enms.spm.gz": [
+     402451,
+     "b9253ad3511d3a81b8b4072b799bd21190e91088d449871a4f32306e7fee6a3c",
+     802440,
+     "c1f182330fb8c80778da36dd6e5bde59464db2390f623ea62817081cc759695a"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-nb": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enno.s2t.bin.gz": [
+     2140231,
+     "e7e6279fb6ab285dbb721879aa902391ed810e41f68975acda8aca3dbfc8bf0e",
+     4234572,
+     "0780a1659ef460864ba92da6d58ca6f9056fb8ec8be507c189aeb25ce23e429f"
+    ],
+    "model.enno.intgemm.alphas.bin.gz": [
+     12713546,
+     "a2a80d1d9a379fb8140e4ccd952407fa9affb0305bb3d64f11d7bbdbc6840f33",
+     17141051,
+     "78429eb7f544361061c9d9ec2f0872adf30b76e4c9ef3dbaab1210a0f2aa19b5"
+    ],
+    "vocab.enno.spm.gz": [
+     408395,
+     "c14e7f72c3e0a38f7296c30991fe4c04de9d124283d9e05504b4946f62f9544c",
+     802190,
+     "cad75f2c3eccb9545b571ca32f235e6ffaae6d8a77bfa808cf8068948c421f10"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-nl": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ennl.s2t.bin.gz": [
+     2106716,
+     "2c55d2fee4f8aa49810e47ef178be3aee5c49826f538ba03e26a79f6f853e40f",
+     4030624,
+     "bb4922718f8ca6d746ad090c0a88110a664dc050ee3f311bce33698b4e1679e9"
+    ],
+    "model.ennl.intgemm.alphas.bin.gz": [
+     23381231,
+     "9a1ec2f244635da16a213cf8a77d7b4dcd9bc91230b3afbf9856793e80ae6dab",
+     31561787,
+     "7e8402da61972dc2fdcf7147c7f1e12f7916a6d9349514ee7a731288357575a9"
+    ],
+    "vocab.ennl.spm.gz": [
+     409052,
+     "ebc32a488bec92ec82c2efe037770e3e9862d794d78a4f9b35bcbd9f4ce744b1",
+     807708,
+     "c09588ca5662b230ed65bd39a07f58d9f7dd21c3a19e4aeb1bff39bf3b297c56"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-pl": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enpl.s2t.bin.gz": [
+     1830876,
+     "def70d9eda149ebcc688789000e343709aa67fdb75dd75287a6b7c291b22719c",
+     3540052,
+     "d7d7b364673f633763c9f8f2e8ee9c7a184e92f4086e8b84abe870a2a8dbe5d5"
+    ],
+    "model.enpl.intgemm.alphas.bin.gz": [
+     22567926,
+     "a2c6f228e1ca9306c362ca5bb48ca55d257be4f0b7bdb31b6a590c90ca98c118",
+     31561787,
+     "b0b59716bcc8f46b8dc6ab5c32a2732acaad42a5a6d9ae9b472526a1bb0d71d4"
+    ],
+    "vocab.enpl.spm.gz": [
+     413076,
+     "8f91e94c74c30546f9667e1290135a58dbd2acbb89d6ca7933b38132ee523579",
+     821612,
+     "2000f182efa8ce5f69bc3f9e574666b5bc2c0af684eedd32f69d15aa9021ea85"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-pt": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enpt.s2t.bin.gz": [
+     2070539,
+     "ae89b70c915a736b21736b349e72d9597b291de9da84951fffdc5786b71d873d",
+     3970340,
+     "ccb4c31c9e1899d77a200e71a86958e6ef6c8649627d0bbf3f873b57d9f236bd"
+    ],
+    "model.enpt.intgemm.alphas.bin.gz": [
+     23332007,
+     "f635ea80bc4347d8a6be4bb4df2ceaf68e82dd102b9b590146580ea886320a63",
+     31561787,
+     "07892fd2544ee79dcb643615d8f2debb9793fae16842e87c328e27a3dd26a770"
+    ],
+    "vocab.enpt.spm.gz": [
+     407651,
+     "e9e187b40ecbcb3e168a27de743956141ddbb8cff7affecbba0efe35d1d7a841",
+     816726,
+     "d9f46182823d5bbc84201252b2dfcac28f63e561f0ec827ed858f241864c9def"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ro": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.enro.s2t.bin.gz": [
+     1795274,
+     "6ff30ff1f44419a0a321d17a870f19e161476429897903cbcd2cec9c03f2a171",
+     3739880,
+     "508bce64a8bc906a99043ad2f4855b4662e06f8827c1c6a75ab83181b4f17f81"
+    ],
+    "model.enro.intgemm.alphas.bin.gz": [
+     12209033,
+     "91943512cb05b89b928004d13f5b074e80bc68e11695c7b65f74a0a11542a7b6",
+     17141051,
+     "aa98c415e5beb1c5ee2f7d2508a3bbba949be223d7d9e5e1788ad0ae8598dda5"
+    ],
+    "vocab.enro.spm.gz": [
+     396555,
+     "cee2062ff3b2e13fcae064c5990327119f8f39bdc46375a4e6c0d50728803ed5",
+     801522,
+     "d89eedf6cbbcb30d7ed4b0b092189196ac2b010ec0c3ede33a6676b17ea1c95e"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ru": {
+   "architecture": "base",
+   "files": {
+    "lex.50.50.enru.s2t.bin.gz": [
+     1314298,
+     "2be7054ba8b5fe5690f05d413657b430caffdea711f7cc8a1e5e7e09609914b4",
+     2768468,
+     "3587f93c10c1d457f874c2ba7ff4d5e2686fdaf7f3fd179cfefeacab3c6990b9"
+    ],
+    "model.enru.intgemm.alphas.bin.gz": [
+     30689230,
+     "e7ba096eaf1e609afcbc216b8f28e9c66b94ba837e0cbcdd3f8fc9c0a62019c2",
+     42992955,
+     "0ef9a209c5edc46692750e7505b3695655b1c7c3ec73058b641201ef18c481ce"
+    ],
+    "vocab.enru.spm.gz": [
+     415662,
+     "31327b90d78945dff76bd9f2028a6cf60fb602e2dc0d7b438e6232dd571dab90",
+     904455,
+     "56ee63e14e8cb926c394242adc3ed7cc602644c3d33058cff2ce2959d52a6258"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-sk": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ensk.s2t.bin.gz": [
+     1662569,
+     "fb0b1a9e6a359421957092e6cab114fa0f16fff076fa609fd1bd8d5d665d966c",
+     3356348,
+     "f3d1aec4ee5246d6a6ee5dc7ed4c6b18f6071c7baca69bf1344aef675b95515d"
+    ],
+    "model.ensk.intgemm.alphas.bin.gz": [
+     22892755,
+     "de22c495ba49b1d0485b2042ae5022e6feb657cc9e388504951c71fcab790dc2",
+     31561787,
+     "e33af359fd58c8958104b1b74b3ea302800ccba2f125c1629e09d7f9dd9a3804"
+    ],
+    "vocab.ensk.spm.gz": [
+     404115,
+     "46a3773f670e8cfc4a73fc09ca1330666123139d2aac9281e75bcd75c983a51e",
+     808888,
+     "cfa6a9e601d74686b117f041eb1ad9de94c34219110b67367d570a9e27026a46"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-sl": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ensl.s2t.bin.gz": [
+     1696134,
+     "d3afe1c86199f2a971a8bf5698defec47bb3a2d8c74cf370d8c878c1e464a108",
+     3428300,
+     "2190798297bc12505f917189defcf451ab5bd2e815bc05df244dc291dc2ae63b"
+    ],
+    "model.ensl.intgemm.alphas.bin.gz": [
+     22661877,
+     "c1df6d7ed3369e197ba2a609f0a6305d8f9dfafbe75d071bb2d2792c13accf6f",
+     31561787,
+     "a34fc5cc2f52733f64e37f8512cf1ddc4723c08a7a1a59d01fc2b6e641fc2280"
+    ],
+    "vocab.ensl.spm.gz": [
+     397285,
+     "7348c16645f7dabacd3a92405bec550b7768e4d8d5ecf54ef834bddeb43e0cf5",
+     803212,
+     "7cd295383c46824c05a05db76b543d3595f2516537dd22b77190a45c8919224d"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-sq": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.ensq.s2t.bin.gz": [
+     1563607,
+     "8391a2c4f72a36f87f50e7360c6e2de355aaa05f5c9a16dd4319113973f4350c",
+     3303648,
+     "c901d1f5910315e0791720fa6f1275d79565e59d85013cf66b2f98cd9ba58ce1"
+    ],
+    "model.ensq.intgemm.alphas.bin.gz": [
+     13360225,
+     "d672afb8220117b89a8219fbb09403c05bf060f2d6fe9de68fdd61e59b42bb22",
+     17141051,
+     "8a90d17ab2798509e639e544caa1d577f7cf87c31b9ab7e53890c8d1d59b6eee"
+    ],
+    "vocab.ensq.spm.gz": [
+     409773,
+     "4da45bf998481389303494a13b389144a7177a611f124ff7f8480d32e2ae81b0",
+     820048,
+     "f27814dffca6102255ed7a338f2a83c16905a07e09444016187c768aaf9ac7b6"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-sr": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ensr.s2t.bin.gz": [
+     1260718,
+     "f6c611bc766ce2ff63853951188bf4ad413dfa099359c5bc4b8b0ff05f83af17",
+     2542096,
+     "b2ae22b4d7bc4295d25b8a55559ebbdbd8f728bc8de5c3d6f110bd44ce7d8962"
+    ],
+    "model.ensr.intgemm.alphas.bin.gz": [
+     23010003,
+     "2ce8ea5cbc29e20b8cca3be06b7918e81c9de857ec01c02841b8b0c0818c6fe9",
+     31561787,
+     "d26e1c5a01f917c38ccda17d1bf116024ac4d988105e1bbf70bc5e8f9191c57a"
+    ],
+    "vocab.ensr.spm.gz": [
+     431106,
+     "e6ff9aca2cf79cb58e35732dbcbb030905d9798abcef4e15eb0acd66c0ec56a6",
+     922599,
+     "7f54ba1554b7b1a89299a0ec5950535432f062b50a5f8c9bcd664a2444fa882a"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-sv": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.ensv.s2t.bin.gz": [
+     1873001,
+     "affa77becdaec38bed1d259a3c979c6213a11644940037233509ea76fd56e158",
+     3948180,
+     "5761c39887a0e0cd3dd38d22cadc31cecd2a43b0514c4bba96b426736e7fd72d"
+    ],
+    "model.ensv.intgemm.alphas.bin.gz": [
+     12768111,
+     "b60223af6867aa848e6800e689483973e0dc4553f6388b27cfcadc9a2eb49565",
+     17141051,
+     "65ea0db8e658435846f297384face62dbf1804cfc92de8388b0e368e6ecc25a7"
+    ],
+    "vocab.ensv.spm.gz": [
+     397964,
+     "2dae3255ff10d5a179ebd72bc74f612a8fe3cbfe01a3bd0bcd2bb094e488952e",
+     793868,
+     "ff7e366ff4228107e58d76ca348e7dea2eb325452363d68e0047e97fb483e40e"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ta": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enta.s2t.bin.gz": [
+     1402201,
+     "10ae63cfb00d4d0b51b6b96661f38fbdd37432074bc862e6ba7f770b9ad75d3a",
+     2746824,
+     "3a40b2175a114f3ca0ee5501c12e9636ef46f282304b041001f282baf4a5bc6f"
+    ],
+    "model.enta.intgemm.alphas.bin.gz": [
+     23202940,
+     "aee02f5edbf113caab242b980787159ada9d14b0df94e60a17ae798eab53b5ec",
+     31561787,
+     "83266ea604611756d1c3c358d7bed1fdf79a646c1f701b42c1db501c237c0f3b"
+    ],
+    "vocab.enta.spm.gz": [
+     444216,
+     "0448b8dc29f85b4423866a81e182fd688b017d46d6c48a05b92bb754be3cf75a",
+     1097357,
+     "c4fd3cbcec4e7c8a80b7c0656092fb482b9f266b1e8c6cb171f81af394f0f899"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-te": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.ente.s2t.bin.gz": [
+     1398866,
+     "ee256f7768b5dabd22f60e38c0ea21a75c85215f952b057e4091a97bbf099751",
+     2832156,
+     "ea44d146f6b4614586654d91d7b677ee617e2367be2eccd72e81aa0fa359b92c"
+    ],
+    "model.ente.intgemm.alphas.bin.gz": [
+     12586893,
+     "255e2bf17b3406af2a6e123b202187f745debf5bd370843a9c1ce052e3381402",
+     17141051,
+     "a3fee2fcd39df975da28666c536adff60147dce59062fca6097bb42fb2a52500"
+    ],
+    "vocab.ente.spm.gz": [
+     442796,
+     "7697c07ceb0ef889db296f3f50eca9802859291c97add4d980b42e0f4c7089b3",
+     1056424,
+     "41d0828d103a07e0608c604102ba4418fcb06e82b3742c1abc6d3ec343673e93"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-th": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enth.s2t.bin.gz": [
+     1566222,
+     "f8f9c8a64eaba983ee82ae528e2828b4ef11791c046c53312c825149e56501b5",
+     3016612,
+     "6961ce07f38e6c113a70855706aa7cad4cc828f986d1751c33f14699f885a2e8"
+    ],
+    "model.enth.intgemm.alphas.bin.gz": [
+     22970986,
+     "46f75a999b7d899449ff32d5869950ed27fcdb4e28f8693d22b0b7d15e822b03",
+     31561787,
+     "80e326097655fca75f841130da3338a849aa245374e1616448bcf37b9523a05a"
+    ],
+    "vocab.enth.spm.gz": [
+     445646,
+     "d42b8250f248140c0a773461dd438f5d96e0fb39f8c3604b946b3b396bfa91de",
+     993517,
+     "5deff7093d558768f8c22406449202e27595f023cc383a2b66beed240ed46443"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-tl": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.entl.s2t.bin.gz": [
+     1385297,
+     "5461a4bfbfd46ad0d46d4b096739b7b0e9bfef4b2f210cee9949e665369fcd0e",
+     2782328,
+     "6e129305669e4b79ac6fed8f9f4bea3b7f1372440bc26670d94b40a4f3398164"
+    ],
+    "model.entl.intgemm.alphas.bin.gz": [
+     23491161,
+     "73f400dd37c86d5661c70a6482fd98cb1d871c6c61fb60e5671a88a519fe402d",
+     31561787,
+     "33b71965ab9c9c533c63444551c9483e811dd540e75e4cfe21d062a83a60b72f"
+    ],
+    "vocab.entl.spm.gz": [
+     406946,
+     "bb17d2bb8f0b16b81fc5f96ea0c184a1ecfd86985eaaa56a9c603056bb4bfe89",
+     812108,
+     "bc9fe1743f2ef0b91c71506c47b0344ef9d3ce6047becfbced81c6c6dbb6109b"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-tr": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.entr.s2t.bin.gz": [
+     1514459,
+     "68d69316f342acc52805bacc4e260eff56a63035b9efd88d16814f958f4c97db",
+     3261300,
+     "3aba0be842bd4c192659c781e6fdce8eb9b2b1fff29a40d22f75da369d59f46f"
+    ],
+    "model.entr.intgemm.alphas.bin.gz": [
+     13155465,
+     "e6eb179ee7deab48487b0caf750e447f26f816ac608cab4fddc0903b936f5ee4",
+     17141051,
+     "ea3cd4ee09de190df265c78d84260e277a9a8a3ddff05eb55d72afe7fc0fdbf4"
+    ],
+    "vocab.entr.spm.gz": [
+     394738,
+     "08864540af69ea66bfbc779005a2e382eb6e012006ddda331dd31ca8d0d1e571",
+     798793,
+     "a220363d60391f7ce3df8ec9785424dbc00c24d5786d1a4308cf8ca3ed3385c2"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ug": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enug.s2t.bin.gz": [
+     963871,
+     "4498e1473433e85aa85a32f45715f96c26e5d8d56f6c46d54471639fa18b9bf8",
+     2044456,
+     "adae8854b9d17cb4c2b72ec8a6a67e44a3d800497b5bb360376d07c74f88688f"
+    ],
+    "model.enug.intgemm.alphas.bin.gz": [
+     24241052,
+     "fcb0439df943cbeff20ad2a5da07fd7cef0973c949988a2097ca19ff501094da",
+     31561635,
+     "0fe41f8efab57c8f763d82af523f0219f5e4b90d559abccb4bf0c51d6af16660"
+    ],
+    "vocab.enug.spm.gz": [
+     404054,
+     "97fbe2ada4b9b9a655fef2b8a7b3b80ad9598b324e90f7b28c88e540a195c91b",
+     869060,
+     "730c6534e78e36115aae8df060359b9c85db5c7c6c43279f3eb76c3fbdd7f80c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "en-uk": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enuk.s2t.bin.gz": [
+     1525471,
+     "d853fed8e9835564609bd42ba36b4389171aaa6aa2fd608eb285690eff551bfe",
+     3054364,
+     "dbfd4f8dc95da9c575164f7fc95ef00a2fb5f7d9f51b656559f99eeebdb57c87"
+    ],
+    "model.enuk.intgemm.alphas.bin.gz": [
+     22858090,
+     "e18889771111dc24ab66b2926184fe615ceed242ae7be5354e6cefc25f574558",
+     31561787,
+     "ed8bb4a811e1c45a259e91052080d25e5c8b4e2df0e59cb1521c04a57855ef97"
+    ],
+    "vocab.enuk.spm.gz": [
+     434171,
+     "f8d4a46bb355d02402ae6dec2ff29af3b410035e30038ec290132ca3923b850b",
+     922077,
+     "4dd6a91feff71e745395dcc0d52f885848ca0d843d5f70628ca51b3be1b70b45"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-ur": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enur.s2t.bin.gz": [
+     1458629,
+     "47297c40b2bfa170354ed262a24b16c9caa7affb6f7c00f7dbd3d3d5f2b14079",
+     3067772,
+     "64fb95c1f2c782cc76227b5d3a09e08cb30fea7b14a27aad69b929ad25f24401"
+    ],
+    "model.enur.intgemm.alphas.bin.gz": [
+     22677895,
+     "3ee2bd077b557d0155b94094ee1a3f88258b6b5ed3cf7be871e96ffa26d179b5",
+     31561787,
+     "0c29a5776a42ccb68f7969f41e64c0cd7a16ff00a5bfed0ed2809039febc202e"
+    ],
+    "vocab.enur.spm.gz": [
+     416332,
+     "84ee80920b405187819a911f22369a2c14ea546dc4d2b75484a8d5e75ae92585",
+     842549,
+     "24be4dacbcb080e4dba5cd025fbb90113de346dcb49930520f49fed484ac2d1f"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-vi": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.envi.s2t.bin.gz": [
+     2155421,
+     "983433919e370391f70bf6c331646195728a9a9b24352c622c63620e4fd737b6",
+     4597684,
+     "18116817fcd3d24dcdfd97cb57e9e60472800dae3b8a007f6f36d61d645f699c"
+    ],
+    "model.envi.intgemm.alphas.bin.gz": [
+     24237858,
+     "db9d7abe43653fb6ddabc4f2d25b0ac335490c45536aa7c28d767f4955f477c2",
+     31561787,
+     "04fa6044593a404c2aa02b3096f203880852df6f8f41e5eb966ed9f2b4366737"
+    ],
+    "vocab.envi.spm.gz": [
+     398874,
+     "3aa51167397317d914b112005b51ffa27e9ef0665f2a10060f8e9dee3cf7e0bb",
+     785200,
+     "76daa9a49e393e50c865c889290e4dc36e9453e5e1ec9df7b9f3bc39ea782537"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-zh-Hans": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enzh.s2t.bin.gz": [
+     3443078,
+     "96bfdbebb234b6ec958b3a859e96569e7058785d4006ddff4d8ae9bd87d894e4",
+     6506248,
+     "4a5e5827788060f1d718a8132b69440929387514a045796e9b77f935db68c055"
+    ],
+    "model.enzh.intgemm.alphas.bin.gz": [
+     33370474,
+     "1baa8096a87c741930fd1a4e415b9889cb2ab9a020bb2da935aa80df147152c9",
+     43849787,
+     "4e5accc141373565ddc8fa1565bceaa8d0c3482a82cab8131c719ebcc6c2157c"
+    ],
+    "srcvocab.enzh.spm.gz": [
+     407004,
+     "bd7f13e533fcbd26ce81bd37dade604ee5df02da60915f5b8e060ae99f232b44",
+     806952,
+     "bd9b65504acc6d9726dd281f7defc2adb7c2c22d0688fe2f84697de25197c8c5"
+    ],
+    "trgvocab.enzh.spm.gz": [
+     423360,
+     "920a6eecc7843441a10a2190058369de2f6c7e4c7500c2480eda35a4598de017",
+     772004,
+     "aded6993c36e440284d11cec3f6b8aef9c0e43188a772d80be342a713adf223d"
+    ]
+   },
+   "version": "3.0"
+  },
+  "en-zh-Hant": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.enzh.s2t.bin.gz": [
+     2244684,
+     "9bf58397eb278557a297fa3b7f34bd3e79264651669c707d4b8bc840c4a83ae7",
+     4057188,
+     "d891404d1436a7334df12539fe30a26f9e9f2b80bd42fdb8b5f8849e8a1e942b"
+    ],
+    "model.enzh.intgemm.alphas.bin.gz": [
+     33286194,
+     "f3219cc7028ff17b96f8dca7d48724fdbc07639ba7660bac5f559d3784e6eb92",
+     43849787,
+     "559ab90d723a58c1f1e2ab7cc12137bc667af5ba3e325e3eb30b5cdc930db520"
+    ],
+    "srcvocab.enzh.spm.gz": [
+     404211,
+     "3bb3887752aa117217646966f9f66f05fbe0d612b2c59f3490c04c33b6b4d508",
+     803694,
+     "2266df70492162a249ab1c0154f929bd6098b246544c666c1a0d5a24dde7d2ea"
+    ],
+    "trgvocab.enzh.spm.gz": [
+     414783,
+     "f587f7a0fa3d57d73067b79bc9d1baa86906659112db541f270bdb92c293a011",
+     751671,
+     "22b91a4436d70b91ab8777c677252ab5fae2bc284d71f977df5206c110e3444c"
+    ]
+   },
+   "version": "3.0"
+  },
+  "es-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.esen.s2t.bin.gz": [
+     2482444,
+     "f54432ac699fcf85a5d4e2b809888b250b118aff80adc2e1d5645fd6ec54e333",
+     4636248,
+     "e2610211d3b9577d012638fe7e7e74ed7b4b708ce96b9e792e67c282a6492daa"
+    ],
+    "model.esen.intgemm.alphas.bin.gz": [
+     23282157,
+     "5088c25d3fe8a8a1932095cc994beb1ba51ce957f3d6d0d34c5952c3b79bb8f7",
+     31561787,
+     "4aed7734152ae0045d1a69ae49c86cfda18f53c61f90e95e1d1de1c7c7c3b033"
+    ],
+    "vocab.esen.spm.gz": [
+     408042,
+     "b7c116286f6eece2e4fe0158bdb835f949e7d6620d043f7f6646b020c8452bfd",
+     816054,
+     "5ae254fa9b15aa182e70fd2a6186b1333c63a29a48043a9224c6aa4fcac058ad"
+    ]
+   },
+   "version": "3.0"
+  },
+  "et-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.eten.s2t.bin.gz": [
+     2254803,
+     "4bd65139a68eda6c56dccd8b249702890a69e69d1e9db33f890bd252de09d86d",
+     4625968,
+     "ad9750f3b41cb5686e561608271a0dc935fc827bf43226e579a6f48a3f6b5f11"
+    ],
+    "model.eten.intgemm.alphas.bin.gz": [
+     22777894,
+     "9a46d2b8eb3ccfcf75f78cf8f337b09172637ccc6e0f2c541899aa3b11c5965c",
+     31561787,
+     "df844b3a6df906b2e0682fb7765694f35b351854db00f964896d9c8c365fbff3"
+    ],
+    "vocab.eten.spm.gz": [
+     413938,
+     "f217296da732ffea9de36605560e54625cdc75a95dff734bf2a5baf340779dcc",
+     817574,
+     "89a3deea4ae7d674fb46a4dae39135dd4dfaac9786f2868d0b5bc5c0aca2ef83"
+    ]
+   },
+   "version": "3.0"
+  },
+  "eu-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.euen.s2t.bin.gz": [
+     1850352,
+     "171444c88bbf7059cfd2360d00c1741e7a3135fab21e9fb850816224c0f8718e",
+     3738856,
+     "4be647536631440bdf68c59d3de5720d8e87a482e0493ff41767488b4df1731d"
+    ],
+    "model.euen.intgemm.alphas.bin.gz": [
+     23236407,
+     "45bf1ec1f21467788f96547feb4d2db0392e6e3ee3d14160fe67dba731911af8",
+     31561787,
+     "f0a31e26b381d6340b069da4d505e11d18ac91e42f0189d37ed5fe6aa3685ed4"
+    ],
+    "vocab.euen.spm.gz": [
+     412213,
+     "2c6380e2674ba40fa2f5bc30f402b72e4c732bfae7ba9e160e6446840d623d4d",
+     826064,
+     "8f0cdff0c5bca8ed24d91c415f428d8b208f4991087723f38c1c28b59896de89"
+    ]
+   },
+   "version": "3.1"
+  },
+  "fa-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.faen.s2t.bin.gz": [
+     1891395,
+     "74c20787c9fca69e1cf139e62fc0acb0bfcc8523d0a2355f160e7cb17a85c44c",
+     3896420,
+     "4828cb060bd4375f8aabb85fed39c18aca52b738838394546f2ddbf707a6f28e"
+    ],
+    "model.faen.intgemm.alphas.bin.gz": [
+     13070932,
+     "553fa62499a7661327ce7978b0fc2f6a69de3c7c21ddfd36f9aaf2e9bf55d938",
+     17141051,
+     "aa326306c177e11129de5bfeba518abc499c0b6005492766748a9c9ea6f4c712"
+    ],
+    "vocab.faen.spm.gz": [
+     414452,
+     "accadf897ac163a127465dff8f09b10f170bdae12f7cfe9d770e70f817aa5309",
+     843153,
+     "bf36943053883d6c0fc98c2985f676a0a37042e796bad0e3df0a813d9d5393f4"
+    ]
+   },
+   "version": "3.0"
+  },
+  "fi-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.fien.s2t.bin.gz": [
+     2507610,
+     "46be201236e72b1a29650e9f64e84fa31572c92c13bd0ae7407f9ad1cc1b9636",
+     5195132,
+     "8bad431e07b062ba47f363b76e4656cc743fd608316d8a4830a4315e44ac9abb"
+    ],
+    "model.fien.intgemm.alphas.bin.gz": [
+     22928322,
+     "95c693b8bff19da31b22f886be6fa5e19e7b3e3cf04cebb32ebdf226720bae1b",
+     31561787,
+     "e3887341f18bcc7787d9b59eb1229b56eefce18d49b7ebf1e62c55d65a377321"
+    ],
+    "vocab.fien.spm.gz": [
+     413560,
+     "36e65049cdbcb4f31285561dc765058c584ff792945ecc772b271431aa4f5ce4",
+     818770,
+     "6a866911427f2916609ae89c7f2f04a78de3fdd8aa183039ecba986635d4f246"
+    ]
+   },
+   "version": "3.0"
+  },
+  "fr-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.fren.s2t.bin.gz": [
+     2587135,
+     "13908048d66a4d3f4598b99276137824e07a02c7612f11f21fe9feb759720171",
+     4824120,
+     "87c6752ea908f5f0347c10ac0cf7d80d9c2f4f20c81c90168f3e8230b56d4440"
+    ],
+    "model.fren.intgemm.alphas.bin.gz": [
+     23171678,
+     "6d4d1cf431c8a254bf7f3f72d8bb12289106c6a3cb8f85aa3f17d9ada56edacf",
+     31561787,
+     "15f997bc0d13808b0b0fbd0786e684a3c8a52adcd8071844b76123fdacbf2b90"
+    ],
+    "vocab.fren.spm.gz": [
+     408365,
+     "2375c59a8f30622531cce7a7d8b378417177d86818c6600311501201e6c15230",
+     814404,
+     "783abf3abe075afdf8d85d233994bef2c3a064e935ab1bed946820aff6ac002a"
+    ]
+   },
+   "version": "3.0"
+  },
+  "gl-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.glen.s2t.bin.gz": [
+     2138174,
+     "d485d410f82d824519b0a627c7d51eed20a64cd5c57b3ad6c9d37d1a96bbcd5f",
+     4367596,
+     "fea6d0e1ea5d5e8e5f7207e4572867fb8f8d8b3f5f983a33067a06b218ab287f"
+    ],
+    "model.glen.intgemm.alphas.bin.gz": [
+     23049548,
+     "d8af1d97987bd750763354af0c0b23c10f806069a4a09163a903402abbaab959",
+     31561787,
+     "7e8ea0279166c72b0b430327533c643a88f26e80e4a9f9f294244a84213f3e6d"
+    ],
+    "vocab.glen.spm.gz": [
+     408962,
+     "377144bd066dfe8161b73a2284e088e948fcad1887d796a546c020ab9f5ff7cb",
+     827023,
+     "5157bf2e08eeac7b98703bf50a14653eab84607bb707a00db81585f61c814a6c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "gu-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.guen.s2t.bin.gz": [
+     1976111,
+     "65d12db74b8505ec47b29d85dcf651b70516e2148f022dc9e773a00f4ce53e8c",
+     4197836,
+     "af01dbec5a1555ddad7c4b19878ecda00e6f9d179ca76a40ab2413de6b081cb0"
+    ],
+    "model.guen.intgemm.alphas.bin.gz": [
+     12917114,
+     "554f831cdb4ab894ff71772c8857a997d35118f792d16308c8cd066245fe5482",
+     17141051,
+     "7b16e4e64f2776c73d87db01922c091738566b6a6092a42488cbaee1385cb4ab"
+    ],
+    "vocab.guen.spm.gz": [
+     432042,
+     "801393ae106e1c89b72f94232dd9cce3763fcfb8d78c7f2b0f6201ab299c5dfc",
+     965143,
+     "6ad2aa442cc04398bd06b4f03a1027939bbfbaac5f87b3d21f667406f4f62704"
+    ]
+   },
+   "version": "3.0"
+  },
+  "he-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.heen.s2t.bin.gz": [
+     2168836,
+     "c74519efb654615f71932c475e69b066621611496a80fe7c076aac6cf35496d9",
+     4636028,
+     "427c88732cb93b28d2a947cace79f62aabceb7d6f4438516e85994b14a73b68e"
+    ],
+    "model.heen.intgemm.alphas.bin.gz": [
+     12997557,
+     "549d466c6d25bd5246d71527ecdb222c6267c59ca18658e83199b6bd1da64b6c",
+     17141051,
+     "7291cab3ec483b8cf524da96201fe947dca8c550132be21a06badeb946b5c079"
+    ],
+    "vocab.heen.spm.gz": [
+     409037,
+     "ae3080de7224ab385a788b8aa0d1f12f7d9a2e54440f46df476a0564b63aa588",
+     845177,
+     "45f5d413b9208c5f24340ab0e20a63604a572784d289baa2d788deea946f79a2"
+    ]
+   },
+   "version": "3.0"
+  },
+  "hi-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.hien.s2t.bin.gz": [
+     2260008,
+     "06221b359b69cf79157352f42ae5f19eca052e6863cc6c094cb4ffe3d0beab72",
+     4605984,
+     "e789be33dfdb639e98f5cf9eb01aa945ec3c882f68f3c8860389cf846f0112d8"
+    ],
+    "model.hien.intgemm.alphas.bin.gz": [
+     12747690,
+     "302c3ffe03c5d1dc3785851c006ccc7d780c1bc91c7bd5eec2c4d6842a1fcb7f",
+     17141051,
+     "c82fd6ed3794b79fb9dde0718a22324502a408a9eca73497b5d0a4b8024ec6de"
+    ],
+    "vocab.hien.spm.gz": [
+     427479,
+     "1fa2148cf5d6ed6ee66e210d006d5612c767561d3c20af40e0eae18f6f95be69",
+     925436,
+     "9cbc02094ac2ebd75211b3bb6789a9d6fa112ce3c08e897f1645f18b21fbab00"
+    ]
+   },
+   "version": "3.0"
+  },
+  "hr-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.hren.s2t.bin.gz": [
+     2506664,
+     "8e2ae6400a3db9fac936317ea23682f59bb7f8e93762c77f2cc3bef172599353",
+     5155408,
+     "dccff06320cb87aaa6f93c246038b453d0d0c6f47fa3acd1162f104ac6a2c43f"
+    ],
+    "model.hren.intgemm.alphas.bin.gz": [
+     22944804,
+     "bbb17fd1e946d6b291264c15548e15482d2b0aededdabedfdce9ae074b33deb5",
+     31561787,
+     "744c61ec0b987c44717f192fcebda7c2a1ac34f5cbfb56672771d28ff79c82c7"
+    ],
+    "vocab.hren.spm.gz": [
+     409420,
+     "51ba0bf04b4c8c52d6bdf7b053d2de99f421b16b8bd485d0b0068b72ac1a43b4",
+     817335,
+     "320561e2cef014a6d626a64822add3a387c91f609f23ea3b7f421d194075c14c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "hu-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.huen.s2t.bin.gz": [
+     2366248,
+     "14df13489b1b516ebd562c7205b3a3c90072db2eb092597b6b789b220ad500c2",
+     4847184,
+     "9d701f7b9c7472ff0a02154983d67136ef50052b5955fbf32ced0eb8377d235c"
+    ],
+    "model.huen.intgemm.alphas.bin.gz": [
+     22574474,
+     "55ef7e0673bfeae82e7b8b3c7d17016bca9efa84a079c2fef3d41ac054b92ad1",
+     31561787,
+     "477d9ff69eaaf692e9c87b5bad681748f56da2f81b0dd393665c90f5d6f7d55e"
+    ],
+    "vocab.huen.spm.gz": [
+     421256,
+     "55cd6a6e941a4b4343be56f44c6509d3a21e50c0e544c01f6b1196b142a386c0",
+     832895,
+     "77f61965a24b93eef9805d32049791b05fdc351ec4b3dfb938995f947390149c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "id-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.iden.s2t.bin.gz": [
+     1780602,
+     "4d63ed58ec6b9b75e4edebed6c3039e2a9ccb69b118f1600ace13fe996d478b1",
+     4050348,
+     "7a543087d4e9c1fe2f6b6f735b5e31aeadab80235e734c0388278722042ee3a2"
+    ],
+    "model.iden.intgemm.alphas.bin.gz": [
+     13009599,
+     "bec7e9fbef2ea4ba3fc1dc9540e0b2d00aee8540cfe70d87e7343add503456ed",
+     17141051,
+     "eeed3d8c2c78ec7011b31b2419e1d2dfdf2a7cc0ee0dbb1fcd164c934cb5d328"
+    ],
+    "vocab.iden.spm.gz": [
+     378781,
+     "0601055ee6dde160616a21935e77fa9903a74f34c821febcb80f326e0c7ceed9",
+     772941,
+     "a2dd1462abd17cccbbf3fefc562131f06b293f8ff6a5efad73ebb0176810d835"
+    ]
+   },
+   "version": "3.0"
+  },
+  "is-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.isen.s2t.bin.gz": [
+     1958676,
+     "0e2c676f980570c66f1730f87ad2fba225c57e1908e1aa8ac5aff231afb8f461",
+     3951884,
+     "0655d05ccaf3cd2a01f910ef542455b7b14e66d96f6c95889079b9ca1ee168cf"
+    ],
+    "model.isen.intgemm.alphas.bin.gz": [
+     23226235,
+     "83ac2ecc09f1a68279e7b77ea1bd7a113de23bde2d51974c865bf3902d7bc05c",
+     31561787,
+     "d2c285755d37f710458f1a49db5391a123e4e41ca7bd9829dd87cc61e4907ee6"
+    ],
+    "vocab.isen.spm.gz": [
+     412173,
+     "1519c32b054f4c1101a7a4fffe65ed35619b95f0840d06859e2c226c6061504b",
+     808315,
+     "5c69f0c81f6198f5615ac5aad9d89eb81a46ae8ea396a9e8e274a76409d35e13"
+    ]
+   },
+   "version": "3.0"
+  },
+  "it-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.iten.s2t.bin.gz": [
+     2468223,
+     "aef1d0bff2025989e62f556b9a6d4f36493f66ab89d1c94ec8afd5c6fc43a9e7",
+     4713616,
+     "0700d6d70b30490e68ff9deca0b45b80310745b491855bde3a13e1692d0cbce1"
+    ],
+    "model.iten.intgemm.alphas.bin.gz": [
+     23294020,
+     "3fe42c0b5efde2ce66966c907f381f2e383f30534abe998c7827726b13494405",
+     31561787,
+     "21b70978ce2f3b4da7a06b5de86a09abe3acd30b9eee1b2ebb3582b9bad790bf"
+    ],
+    "vocab.iten.spm.gz": [
+     405425,
+     "c163f3408b0a9b3f07b40fa6f8c6082123501bcdec5ee11cb202700c5324c0b1",
+     812724,
+     "3ef0211d4ae6db21440892f180f2019fe2bfc110a330ffa9d2eca9665e4f2bc5"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ja-en": {
+   "architecture": "base",
+   "files": {
+    "lex.50.50.jaen.s2t.bin.gz": [
+     4706238,
+     "1865566ccd2d0e8fd2645941e3e6e83294dd10a9fbd2fd44e65d6f3cd8b54ee1",
+     9346816,
+     "8f858a72fcbaa476c582577b04d6f5f89d645d2335b0b4a794c2706d4b1f75ff"
+    ],
+    "model.jaen.intgemm.alphas.bin.gz": [
+     43081550,
+     "75cbb141975ad8019e022a68fe2fad024d07aa1ac72edb9b5a8a3a7c9626b869",
+     59504955,
+     "a9bf800679bba570520e1161d7b4fbfcb957add32ca35812134add85689752ad"
+    ],
+    "vocab.jaen.spm.gz": [
+     740004,
+     "58772ad8a6287d5b3dcecdc5ed06cfd0df271a4b8e30c4035a1ba753aae10cf3",
+     1443222,
+     "5cb217758bae05877bb3f0c2f612e4e7c1e4cb03c10db11f4a47098d7ae62919"
+    ]
+   },
+   "version": "3.0"
+  },
+  "kn-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.knen.s2t.bin.gz": [
+     2066012,
+     "831f62a5ccb3facb15e45bb9c3827e725917fa53d2a851614210200a8b24de66",
+     4655776,
+     "aa50a74f15e9ef8cf27a5b905c17037bd9d67883afde71b34c4138f9507fedfc"
+    ],
+    "model.knen.intgemm.alphas.bin.gz": [
+     13072661,
+     "87674b0f7eaa92fe8299578cb6c6617b86803d83afbc260a33fc6a6a1e8b0afa",
+     17141051,
+     "49e8d3bd794b098047f7b177d9d0e6d3e49ac798c2b75bc132149cb46c5bfbfd"
+    ],
+    "vocab.knen.spm.gz": [
+     443940,
+     "f2ec1ccb9366e59a2558a1cccf5ca73a19978d0a2d287469c7a7ae79ac97cd2f",
+     1065636,
+     "d729397a42dba5801f330927a9956527161d6e0711b59fcea7cd2e862e6f36cc"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ko-en": {
+   "architecture": "base",
+   "files": {
+    "lex.50.50.koen.s2t.bin.gz": [
+     4287083,
+     "7051f2743898f5e31f1a8b29d00c0d2cb4b1920414e125d3d434da0b3d6b2356",
+     8617080,
+     "471cd980c4ba08c240246f9361f64eb5d627848a135b5731d665f9efaa1e26ae"
+    ],
+    "model.koen.intgemm.alphas.bin.gz": [
+     43133619,
+     "bb38d1eaa57f5e61eb5d4e1b4b6cf6b33708762fc5e8395e87b2f5abe7d523f2",
+     59504955,
+     "1c902d6f7a8d7e3efe6ff4f7d4960a369957bca4ce2ce4a6e8572c231d525090"
+    ],
+    "vocab.koen.spm.gz": [
+     700237,
+     "56015ef2d99b7bda974c835a4b98ee205105691eb34b47d4cc0c4cdaf913b54a",
+     1410063,
+     "1c72b740ab793cdc3a8f16913dd6b4e806c77421077dd2d85edeb7be38418598"
+    ]
+   },
+   "version": "3.0"
+  },
+  "lt-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.lten.s2t.bin.gz": [
+     2236714,
+     "ecfb9274bdb84ec94fb7cb712ef80c2cb4578efb36ac27e07c0cf0e364e3b21f",
+     4724124,
+     "f687821f4074063031b7857bd61232b4ef520f3cbac5a80d59993b27bf10a032"
+    ],
+    "model.lten.intgemm.alphas.bin.gz": [
+     12572750,
+     "baddbbc6e0d1956ae7aa755973a842e611fe5ce76f6a2e39112c76f48d52a00a",
+     17141051,
+     "0aa4571ede6f68db2f14d2662875b4d2e6323aeccd75e3b4377ab9072a22db70"
+    ],
+    "vocab.lten.spm.gz": [
+     402200,
+     "3b95e5581e933ca5980a5f082d0f0d3de9077240c8da4304ba47939f96d04d75",
+     807623,
+     "df3c6b7e9aa74ab4cce9f4ec73a44aac80be05fcd41ae55198a92c07c5ee3109"
+    ]
+   },
+   "version": "3.0"
+  },
+  "lv-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.lven.s2t.bin.gz": [
+     2067123,
+     "e8698c4c894bda355a7b8c0f0009ef89afba5bee1e491093d83b98c619206ae8",
+     4214476,
+     "dff852d317f80169899e2e1132277cf922fa7a117b060e09a14dd19c0e1a02b8"
+    ],
+    "model.lven.intgemm.alphas.bin.gz": [
+     12687167,
+     "8082ff085bd8347cfe8d58b1949ff737f096481ef6d862a7be373cb9634d5fc6",
+     17141051,
+     "7a96dd363ae9b4485aa254ddbff042223a565a20bfe5ba0ba29b94d8ded0406a"
+    ],
+    "vocab.lven.spm.gz": [
+     405868,
+     "a8a5566a19ab7caf57d129a542744520b68c84db43d83415c2667efedd1d550f",
+     815278,
+     "585a265757c071f5694d1bb7e65b73f38b1d065a62cda61510fa6c54fb87d2c9"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ml-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.mlen.s2t.bin.gz": [
+     2224843,
+     "e29ab668ba2e4508c029e4a81f66aeff020387da4909bd838562043500fd1f94",
+     5017972,
+     "afb882ad10c9540c12fa105e1e5418a54ec8117f11c4f17d998adf1d445e308c"
+    ],
+    "model.mlen.intgemm.alphas.bin.gz": [
+     12791572,
+     "0af9ddb1425de1d2abe5f615d2202ab755fc0ac88a8ac5c6723df392edafd462",
+     17141051,
+     "5480719a5a8ac43acdf28db1c89a4d60837a475e1120ea0c4e021c4d5b7e6fd6"
+    ],
+    "vocab.mlen.spm.gz": [
+     447140,
+     "91d16b93e650ac1f238b9407febc6a9156ef234647f3460abd626d922dd2d07e",
+     1109047,
+     "c6b2150c85a18cae437d4e7245ef29d4b3629b2c611fce812d115a59c3b80efe"
+    ]
+   },
+   "version": "3.0"
+  },
+  "mr-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.mren.s2t.bin.gz": [
+     2270954,
+     "99e8f5e940f5758e352a08f7873a42bf3e92e4a3a001855762c18b74389ddc03",
+     4534544,
+     "27e8cb59d07bc1043a4b61ad7e15c2ce7b4c6aedc54cfe02514b4ad606f7c649"
+    ],
+    "model.mren.intgemm.alphas.bin.gz": [
+     22284639,
+     "8439fd0d08ef03c9d023b444c8105ccde58d4b4b19c3ce237b7266a6dc02cb7e",
+     31561787,
+     "7e4ce4102d159b1d0154193859ee36e26232ad6b1bc656fd9de23ebf530d67b0"
+    ],
+    "vocab.mren.spm.gz": [
+     438454,
+     "02baa2ba6adfaeb4ad32f76f98802390eef6e813797c36fea7b353c24e49cb16",
+     1009482,
+     "1dbe32811a6f1324bfdd9a0e0fd919730044ee79b59f24b3f36f3e07c69a06ed"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ms-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.msen.s2t.bin.gz": [
+     2088125,
+     "4dc2739d1669750c5997c364353fc719ec48d42fd2cb3336b4f895cf721a6683",
+     4371896,
+     "1ef575be54a310eeace84c52e609f2a8c292f3c4b170376ee6ee3524c0c30316"
+    ],
+    "model.msen.intgemm.alphas.bin.gz": [
+     12536582,
+     "eaa9b71573e11ae94e10ef7e470e4fc860fa910c2c86f70720a81f97709cefe3",
+     17141051,
+     "db5c9415591f8a35c5c72046227b9c9398acade5df8afb5e6ac9f11f7d6650d5"
+    ],
+    "vocab.msen.spm.gz": [
+     402136,
+     "1737d952189a226a9534d170b425ee69ea64a95e8707261bf04b924278fd3053",
+     802191,
+     "6db8c20803d5f9c9fff2b6c3950f5bda4a9fa14aaef1d92818f8a3d53fd850f9"
+    ]
+   },
+   "version": "3.0"
+  },
+  "nb-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.noen.s2t.bin.gz": [
+     2243918,
+     "829112a0f439db83513745a32a230afc316e5a7714ef17928d52a5166e1164bb",
+     4517876,
+     "cc07976874c905e859918be71d3fe993c9ec8696d986db2418bb1a16ff4ea500"
+    ],
+    "model.noen.intgemm.alphas.bin.gz": [
+     13194176,
+     "d1f9cb5d1d9da606ee71f9c1eb8645cd4e0ec417d8a62e65bae47e5a2e737208",
+     17141051,
+     "00ab7b969156f6c948be59dad4755e47a24eeb31aa39f02f1de7bce43081cc2a"
+    ],
+    "vocab.noen.spm.gz": [
+     408514,
+     "0c026ea5538a7961edff48ba9b7a7977643e54b079352ac952b9228128ce92e2",
+     802367,
+     "23eb1743070efac5a447f4f72aafda69b1985af272cece85a2f0bb08e6fcdeef"
+    ]
+   },
+   "version": "3.0"
+  },
+  "nl-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.nlen.s2t.bin.gz": [
+     2555181,
+     "0e78380cd8a74f5eff4e2f28f1bba17d5b52afc791ac6d449f65128d5bc2f69a",
+     4862412,
+     "811ac8f9dcbd12706e2d73a7057a7bbe6b9f0607d15170ffe9439977e8229b41"
+    ],
+    "model.nlen.intgemm.alphas.bin.gz": [
+     22637777,
+     "ce8526d3d75b8a2a47000de495f20cdb55c82f26bfa7561bbca853b672c3e3aa",
+     31561787,
+     "ff987741ff15a5d94fff16cbef28f2b0a85a6e9547d982fad60ac09d16d11270"
+    ],
+    "vocab.nlen.spm.gz": [
+     409052,
+     "ebc32a488bec92ec82c2efe037770e3e9862d794d78a4f9b35bcbd9f4ce744b1",
+     807708,
+     "c09588ca5662b230ed65bd39a07f58d9f7dd21c3a19e4aeb1bff39bf3b297c56"
+    ]
+   },
+   "version": "3.0"
+  },
+  "nn-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.nnen.s2t.bin.gz": [
+     700048,
+     "78b166e6c6e81f6d3e5c92e08c89eaeb6b9bcc7296d53fd0243563705c0363fd",
+     1506236,
+     "b19abe7154430c1ee321e29391b14b2752c3350c3fbfcd1caf1ef7a0f9a30a97"
+    ],
+    "model.nnen.intgemm.alphas.bin.gz": [
+     10465094,
+     "d38c1d3bb03906f40bc17ff2355746657c0c5507175d73e400641efd905f10b6",
+     12980780,
+     "17550943381bdfae30b1d8ee29b33b2da2c9ae4d4b9749e2e66b2946e27dce7d"
+    ],
+    "vocab.nnen.spm.gz": [
+     269766,
+     "4cf6291350c352d82a567c71a7171ed4368ff98c9f1fd52b7ad8d9c097f254ce",
+     510942,
+     "14625622062046b7c44eb79652efb113518bf4b52fa1b98a949934b7a94b0273"
+    ]
+   },
+   "version": "3.0a1"
+  },
+  "pl-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.plen.s2t.bin.gz": [
+     2420025,
+     "392b1572ac5114372384bc529052b4a544bec8b98fb25a669c4374d305159a0f",
+     4964208,
+     "b295dfefa7022a62e105276e8c39fdfd67bffe588f4fd78583edd4e04ee0cb3b"
+    ],
+    "model.plen.intgemm.alphas.bin.gz": [
+     22625705,
+     "db9694057407c5e1721c7d3b9c04dc48af0d9843f3bbaba84b4735ddffa2e8e8",
+     31561787,
+     "06dbab3baa3bbceab746bc6a3bba807878f38536382c03acddf59d3edf3b5d94"
+    ],
+    "vocab.plen.spm.gz": [
+     413076,
+     "8f91e94c74c30546f9667e1290135a58dbd2acbb89d6ca7933b38132ee523579",
+     821612,
+     "2000f182efa8ce5f69bc3f9e574666b5bc2c0af684eedd32f69d15aa9021ea85"
+    ]
+   },
+   "version": "3.0"
+  },
+  "pt-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.pten.s2t.bin.gz": [
+     2428121,
+     "349ef5dcf5c05b92157070e36f3234619758ebcffaec597af76dea35aa802be0",
+     4634492,
+     "2685d8b6530be92a4db4cc61f15a097eb114552be15cb6c1699e9d2d99d24470"
+    ],
+    "model.pten.intgemm.alphas.bin.gz": [
+     22699920,
+     "a197b6b9c8f9ec789497c9be4ee7f98711fd52aa70f8c487d85b215de5874d29",
+     31561787,
+     "7b854f1ec5a485dd33efd7c1bc01dd7d5a57f566957c5e47722af333f0ce9157"
+    ],
+    "vocab.pten.spm.gz": [
+     407651,
+     "e9e187b40ecbcb3e168a27de743956141ddbb8cff7affecbba0efe35d1d7a841",
+     816726,
+     "d9f46182823d5bbc84201252b2dfcac28f63e561f0ec827ed858f241864c9def"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ro-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.roen.s2t.bin.gz": [
+     2102950,
+     "7c538ee23e16427278ac285a64291082a815f5de3634024cbece88b16e527273",
+     4691708,
+     "d242745eadff6f345784fccf1d58046061501b28c8190ba5912a9da5f056cd2f"
+    ],
+    "model.roen.intgemm.alphas.bin.gz": [
+     12716526,
+     "99d1cc17d0bfe68141f69c27550ddd61bbc7b8b210fe2caf6c61207abe1f20de",
+     17141051,
+     "e7542557fc6dbafacddae7b48e67fcdb07bd67b3fb55a76139edf366eca5dbdb"
+    ],
+    "vocab.roen.spm.gz": [
+     396045,
+     "75eedee22e8402774d7f82ff228d3b64069e6199d14d2d5d7c0e9e38f29ce3d5",
+     800832,
+     "2a690fbcd1b79bc9b99c43d582252720e0900245c82ecc813c8eb05cf063fd0c"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ru-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ruen.s2t.bin.gz": [
+     2083570,
+     "b14a96c3e96398e7db24d0743d4eb13739ac2bade4198b820dddcdab1a92261d",
+     4397908,
+     "c944e753f298bbdf6506388de7257fb48cbd12c83e2807e2c284fc323771895b"
+    ],
+    "model.ruen.intgemm.alphas.bin.gz": [
+     22792507,
+     "5bfa6d0bd163654e35790d48bb8c305a5e8bdc2044de5b67bffc7bc440ca2fcd",
+     31561787,
+     "aa0efa194b3dbd2da129ba0b8db8ef139126cb0914e57072f62061294746f1e2"
+    ],
+    "vocab.ruen.spm.gz": [
+     438901,
+     "1afdfc7080bc997ae3c8a4ce06f495c7a7b51381207b698fd1cebc64fc037639",
+     952371,
+     "de8af5f87e231ee4016cec4bb482e6b584cb1ca34dcb624fc7b8398f25bb35df"
+    ]
+   },
+   "version": "3.1"
+  },
+  "sk-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.sken.s2t.bin.gz": [
+     2274922,
+     "037d18c7b44e3247d6f2bd4871d23b9ad748a4c0a6f582a12e4db517dfc3d697",
+     4913324,
+     "18577a7ded6b9957c948f2a384683f7ce09def42336c8141eee7ba86b79e2c8e"
+    ],
+    "model.sken.intgemm.alphas.bin.gz": [
+     12818859,
+     "fb4204e4522f555d473989f68990700e8399db14f8445bcbcc337a74758766a6",
+     17141051,
+     "1686f94838ace314719e945606a09a66dafd40847dd3fd352ad3f7a969aac62f"
+    ],
+    "vocab.sken.spm.gz": [
+     403764,
+     "396fd61d45f14b6439d5bd655bdc13c2b89e211f60317d18091a1e16d1e80704",
+     808082,
+     "7d25655bd15f34d77db5d2cb96a51c7943c5528f37f83b677a09bb0ea4e4f59b"
+    ]
+   },
+   "version": "3.0"
+  },
+  "sl-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.slen.s2t.bin.gz": [
+     2069313,
+     "4becbbe63b03d4ab601201a0a3c563e8d50f2e47c9666d02ffb51fbd168fde75",
+     4320484,
+     "f456a49e437ccb4a547e4b51480e29c8b83f11e26a3713af35b078cd4dd255cc"
+    ],
+    "model.slen.intgemm.alphas.bin.gz": [
+     23725340,
+     "c1edeb8f15ef04bb0610e4cf635c09f4d8537e2d155fcffba7e6d9a3c783d6d3",
+     31561787,
+     "9d15df58b60048366de4f7b6e727157ffdaea3a0fd1c1759ce232b057e2f991c"
+    ],
+    "vocab.slen.spm.gz": [
+     397185,
+     "da1792e58268999aafef51f080c584ca51ff819d722563cae4d81bf93e263cfe",
+     803078,
+     "54ed331d3435e2bdc5b02462180197b77631f466fc0e61897b5469449857dd2b"
+    ]
+   },
+   "version": "3.0"
+  },
+  "sq-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.sqen.s2t.bin.gz": [
+     2106400,
+     "abddc70426a3e27205252afdd51d7a77ea48da4e55f82bd4e016bc17ab361772",
+     4256516,
+     "b2f51df0bc14b9f89a29d39652a80167ef413eb1579957ecea825cb0a7575c60"
+    ],
+    "model.sqen.intgemm.alphas.bin.gz": [
+     12592486,
+     "4ed04a8fecec3da638e0d125ca9b5cf8a2cae99a71347876d9d4bcb504c99f4b",
+     17141051,
+     "4b0ce319e7c8f7e1836ce18cb6522c83268e8cff54f2a7f5dcef270250a44475"
+    ],
+    "vocab.sqen.spm.gz": [
+     409613,
+     "56168603b8db2ae9f3d507bc1408358fa575db82bf15b2ebf9291f2296170eee",
+     820200,
+     "6b7ce057b54ed983eb47087254ea8673e20a857739fc5b57874c80c3301bb91d"
+    ]
+   },
+   "version": "3.0"
+  },
+  "sr-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.sren.s2t.bin.gz": [
+     2506664,
+     "8e2ae6400a3db9fac936317ea23682f59bb7f8e93762c77f2cc3bef172599353",
+     5155408,
+     "dccff06320cb87aaa6f93c246038b453d0d0c6f47fa3acd1162f104ac6a2c43f"
+    ],
+    "model.sren.intgemm.alphas.bin.gz": [
+     22944804,
+     "bbb17fd1e946d6b291264c15548e15482d2b0aededdabedfdce9ae074b33deb5",
+     31561787,
+     "744c61ec0b987c44717f192fcebda7c2a1ac34f5cbfb56672771d28ff79c82c7"
+    ],
+    "vocab.sren.spm.gz": [
+     409420,
+     "51ba0bf04b4c8c52d6bdf7b053d2de99f421b16b8bd485d0b0068b72ac1a43b4",
+     817335,
+     "320561e2cef014a6d626a64822add3a387c91f609f23ea3b7f421d194075c14c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "sv-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.sven.s2t.bin.gz": [
+     2113649,
+     "e062a5c79bb920d928621904f2e343a9b8d89ec7d81345dc6e31088f33049e78",
+     4645680,
+     "1c4640765e806d905cdc4f51158f6f869c78709b9e8a43070877965fa13c160e"
+    ],
+    "model.sven.intgemm.alphas.bin.gz": [
+     12846512,
+     "10c53aec63ed92d9a964d1a38ef183065648151b98b446582780a52feeb9f93b",
+     17141051,
+     "92d79e2725718b84aed486473bdfcbe6bba3e7094922d4bead8a121cfa346372"
+    ],
+    "vocab.sven.spm.gz": [
+     397425,
+     "af5ffde7dda3f9ac66b238c35938f199f695ad0c5043a791a28c6965909a73f8",
+     793049,
+     "93427195fac4125722ed778707478ef78cb77b3fdf1ed5b93bee9fd36e30a8ec"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ta-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.taen.s2t.bin.gz": [
+     2347861,
+     "531b996d4a86e3e67049688c715040799689ffa58fff9647afd97d94a801dd22",
+     4940884,
+     "2eb77117d9997984fe700c386126865a6ca951fcfb78b3c29b2921a6a770d63a"
+    ],
+    "model.taen.intgemm.alphas.bin.gz": [
+     23522882,
+     "ba730b10f25f1a367d1acee0912748d6999eca361e50fbd736f01fc019e9e5d2",
+     31561787,
+     "5413fca6c35cd9c50157df1ebd425d6ca02713bfedc1ba7e5fb3050a437b13b6"
+    ],
+    "vocab.taen.spm.gz": [
+     445337,
+     "3ce60949aea80073d6c35d3dbd352099c295d35de458b1b6f092138e4db80266",
+     1104678,
+     "5ce5f840335d9cbbbd76ef160ee2566ebe239d820d66a827996f40dd01467a92"
+    ]
+   },
+   "version": "3.0"
+  },
+  "te-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.teen.s2t.bin.gz": [
+     2142528,
+     "8054849adb1c5398a92bd191d863198aeeb9e7d18e65398fa5b6d1a5dbcc13bb",
+     4815756,
+     "5df84ca17e4cc76a73ef7d93f94f53a89f37a11a456f2b6373ff19c4ce4ef964"
+    ],
+    "model.teen.intgemm.alphas.bin.gz": [
+     13197559,
+     "2675a818edab524c008dcc2acdb88ea906f8acbf3e4bf0b569d072fbb005d37a",
+     17141051,
+     "e2ec7b13ba6148eba309244ee17dc935f1b71e95bbf57154216f6247877abb7e"
+    ],
+    "vocab.teen.spm.gz": [
+     442636,
+     "b04f60f649a107aececa919ca9f5e2d4a5fc87f4312dfb95c2aac556a8325c2b",
+     1056197,
+     "dd57e1d68316ae32f9ba3f77223f317ce39cd1ef72e69e6b06b7c1d1ba954052"
+    ]
+   },
+   "version": "3.0"
+  },
+  "th-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.then.s2t.bin.gz": [
+     2178458,
+     "9c0ad8a62885c24d64d29fd4236c402b88d227b36707e05683acdcd396e428ab",
+     4487056,
+     "3a7661a7f5c811c83f05f53008083b042fea0334fc6044ca1fda4982a8d48453"
+    ],
+    "model.then.intgemm.alphas.bin.gz": [
+     22965866,
+     "d61e564cb8cb061fb7c424b383890c536784229daecfe2fa385265243a498731",
+     31561787,
+     "f70a501324743668b031bee19cd001a66839e8e5dfc0b4a1c44d5ea99d4e8d66"
+    ],
+    "vocab.then.spm.gz": [
+     446379,
+     "0b08a7869992be26324ecdb1dd56c5748b6c7a1c33f03694ae7a19b58284b182",
+     995429,
+     "b625d3dcdfa2b4bbec496c9a0a30d169c917464ac5ea75506c0699972fea95f0"
+    ]
+   },
+   "version": "3.0"
+  },
+  "tl-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.tlen.s2t.bin.gz": [
+     2481500,
+     "fe16a0c2a912ce63e8da5f4ee62d6cf9c2a613507bf50d532900cfa469e3e73e",
+     4952652,
+     "1b008e03e1de8894a33e534ac6fdf6222ec8fc8c13fb8b5c8485fdcb1a2e77ee"
+    ],
+    "model.tlen.intgemm.alphas.bin.gz": [
+     23101062,
+     "fe54cc61d37fa12bc7aef60df2887da410b36138ace6c299dacd37a93d140cec",
+     31561787,
+     "be2e4b60b2be35d8f32e3f68f0a3a567e6a4a27c521d5a9fd6017d1e47599e37"
+    ],
+    "vocab.tlen.spm.gz": [
+     407262,
+     "957ee5d7408ec561d002212734282c5c50498e3930a2705a5960a252886602db",
+     814564,
+     "87fc7d825b65eaf53d53efbd7f95125b8b4b92768b763a73ecf569ebfb789992"
+    ]
+   },
+   "version": "3.0"
+  },
+  "tr-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.tren.s2t.bin.gz": [
+     2377699,
+     "dee3412e36ff806553b7638e7497acf9fd90045051ce80953cec4d88f939cf78",
+     4662492,
+     "d3374ab5267a73ee1aa1d926a298bd349426835f40856991ee959bc5cd4f9fce"
+    ],
+    "model.tren.intgemm.alphas.bin.gz": [
+     12362845,
+     "f8d21a25fd002709a6ebcd3cdb0ffcb57bd8282f25edc1f56edf51bfc920e832",
+     17140836,
+     "bd18594ac5a7f1d9997e7ea5bd80272082219cf8b1ce604766e4f207eb86abbf"
+    ],
+    "vocab.tren.spm.gz": [
+     407368,
+     "50c1753104ce3f2a8152242591915299e9ca8a18a137096c9103c2c17095f1a9",
+     811353,
+     "ed328e589a3ccd70fd3ce7773fc3c01d8b7b18c687464cacf17fd40a8c0daadd"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ug-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.ugen.s2t.bin.gz": [
+     1654740,
+     "3ff68f14b2a743ab29a64c332de4f4541ffe54fbd38909aef1d6a5f42da4c01d",
+     3452416,
+     "19e5bfef380a0fd796c335f69776c6d86eba28aed13d5ca8ff5fee2b78e32d2d"
+    ],
+    "model.ugen.intgemm.alphas.bin.gz": [
+     23546971,
+     "e0ea44e1b4a614206dd0e3fe671cf817e23d2fd5f4d4edb4565a6189ea052a5f",
+     31561635,
+     "ffc0db5c5de708fb4dd6440b1d6b1e4645ad48a8963d98d9240aec8bb044d0f9"
+    ],
+    "vocab.ugen.spm.gz": [
+     404054,
+     "97fbe2ada4b9b9a655fef2b8a7b3b80ad9598b324e90f7b28c88e540a195c91b",
+     869060,
+     "730c6534e78e36115aae8df060359b9c85db5c7c6c43279f3eb76c3fbdd7f80c"
+    ]
+   },
+   "version": "3.1"
+  },
+  "uk-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.uken.s2t.bin.gz": [
+     1743815,
+     "5d65bd75d373828abfc6a4c1f60dbbc0166568e927cb8094b17ff39afa55e6b6",
+     3914120,
+     "32b5e0df493671a223cb5cb32430181cbb7fe6b5562c91dbc3d35410d37e5ff6"
+    ],
+    "model.uken.intgemm.alphas.bin.gz": [
+     12679158,
+     "d9a8005d76fc9cdafe4dea97c419d5d7685d96721c523bef1fa34cfd7b712e9a",
+     17141051,
+     "2e7b8bc9d2569d8b4ae244e964cdc343a0aa3735cc83ecb664be84a37cb45f48"
+    ],
+    "vocab.uken.spm.gz": [
+     412818,
+     "840a6ca64114c1595c3defc05945f16b750cccebbbcc4c5b4a4712873f92f21e",
+     886410,
+     "8b51480dfc4ca2d7a08d2bfdaa9e57353ca97e6cf3d5f9aba4c0179d3665bfc0"
+    ]
+   },
+   "version": "3.0"
+  },
+  "ur-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.uren.s2t.bin.gz": [
+     1796993,
+     "a17e81d41e0f8957510ec1866940e5e9578f75a53fb7bcc289abec48f7a2be40",
+     3518528,
+     "afe891a57dc54974e322fc30feda41f32b5d7d2697a03bfc649dac5e079ae81e"
+    ],
+    "model.uren.intgemm.alphas.bin.gz": [
+     22869905,
+     "6016eb7980683139b865ad0fa4a60d824902dc5beae6e6c222fa7d57ad256d64",
+     31561787,
+     "4915518d1699fb72c390603605d3ead9fb87a8c2f70092089a27df22a7c540d0"
+    ],
+    "vocab.uren.spm.gz": [
+     416602,
+     "01a77af6f4325f97534a696813148d8f4b7b8304820b4b95b5e7a036fd955534",
+     843115,
+     "48304e0f0e30cd69a0d50f0fc61ba6ac2d75f86bab70d7ee59f7af14099e2e28"
+    ]
+   },
+   "version": "3.1"
+  },
+  "vi-en": {
+   "architecture": "tiny",
+   "files": {
+    "lex.50.50.vien.s2t.bin.gz": [
+     1848082,
+     "51861d811a71b241df149d040efcbfa1a9bdfcfe8fe6ee4b3a3516fa34b189f1",
+     3910184,
+     "3a071ed3d982f6eb6ee116b84067bf70041e4229e43ea65ecb6d7c2796e8851b"
+    ],
+    "model.vien.intgemm.alphas.bin.gz": [
+     12913119,
+     "3196a481f170750f1c5d95026993d4070b34e6916b371924e35da31445756f80",
+     17141051,
+     "de4bf2b9ffb4d910e32720ec3a43655fb6f4062ce5219332f824fc1bdca7a5f4"
+    ],
+    "vocab.vien.spm.gz": [
+     375948,
+     "6db1d3a649bd983b695400ff067fd2c35ba59a4f3ceace9a770489ca17a76861",
+     757250,
+     "cb152765d1e71ea3cf96fdb339c764b7201be7b9ab32e20cfebcf16a20fc0939"
+    ]
+   },
+   "version": "3.0"
+  },
+  "zh-Hans-en": {
+   "architecture": "base",
+   "files": {
+    "lex.50.50.zhen.s2t.bin.gz": [
+     4720138,
+     "4940d212e573590c44df25fd9d9e2964d8b9c8b69e6dc667f09005960853435b",
+     9220016,
+     "cdcad3592dc2bc4676c34c4d37203f7649ee989195cf083cbb60f1ea011f976b"
+    ],
+    "model.zhen.intgemm.alphas.bin.gz": [
+     44359714,
+     "6812549f8075aac88c566c680087395c9606d6e41ec515af0333bdfcf038ad02",
+     59504955,
+     "3535442962ec8f4a553cc19b206befcac689ee9cddaea44fa91e21527fc30ac2"
+    ],
+    "vocab.zhen.spm.gz": [
+     731199,
+     "18949f471babfd73217446194305b02efd83084447e204399ae3b86bc1a20e8a",
+     1359697,
+     "dff594318ab7d8b7b60b844ab98ebe6b932ae8045fab15235404c787715965b3"
+    ]
+   },
+   "version": "3.0"
+  },
+  "zh-Hant-en": {
+   "architecture": "base-memory",
+   "files": {
+    "lex.50.50.zhen.s2t.bin.gz": [
+     3175673,
+     "2970347877c3506849824ba4e7376ad89c3d27c61170dd9f19439de408286232",
+     6385944,
+     "aa7daf6cfc85c0cd2c10e2944d66f6da55497c9c6408789f3adfded4074c2fb1"
+    ],
+    "model.zhen.intgemm.alphas.bin.gz": [
+     33647009,
+     "7d7be065cd7d374600f56bc743fd6ec018265f9fa32491569211364e1a72f530",
+     43849787,
+     "0aee91790894458f5d367551f6edcd4c9cb97852c34f221bcbf9f4701ebcf0cd"
+    ],
+    "srcvocab.zhen.spm.gz": [
+     421850,
+     "43bc4d2f5592815e9eb196ce491301646c44e198306599c4ad74e6a17518c149",
+     769669,
+     "5cc6a76611dbf86219f109141533606b15ecb34eee83673bb86b2c16b14734db"
+    ],
+    "trgvocab.zhen.spm.gz": [
+     407325,
+     "48502952f17c00564400924b09c3a9185530aab2e7082d1cfd4e602acf37b083",
+     812572,
+     "7bf002db37c10d3b114cc5588d7fdcb16c57d0fd1e2c34354c22cc9f0b6c3c29"
+    ]
+   },
+   "version": "3.0"
+  }
+ }
+}

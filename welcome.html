@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audio Translator</title>
+<link rel="icon" href="icons/icon128.png">
+<style>
+  /* Открывается после установки (background.js, onInstalled). Два шага —
+     как закрепить значок. Снимки — настоящий Chromium с этим расширением
+     (Xvfb, масштаб 2, окно 1180×640, верхние 380 px): кружки и стрелки
+     нарисованы ПО снимку в его же координатах (viewBox = размер снимка),
+     так что при любой ширине окна кольцо остаётся на кнопке. На живую панель
+     инструментов не показываем: она съезжает с версией браузера и шириной
+     окна. Шрифт и серые — графит панели; пиксельный шрифт чёткий только на
+     24 и 48 px, поэтому цифры в кружках нарисованы квадратами. */
+  @font-face {
+    font-family: 'Fusion Pixel Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(font/fusion-pixel-mono.woff2) format('woff2');
+  }
+  :root {
+    color-scheme: dark;
+    --bg: #080808; --raise: #1c1c1c; --hover: #303030; --deco: #444444;
+    --a1: #626262; --a2: #808080; --a3: #a8a8a8; --hi: #eeeeee;
+    --px2: polygon(4px 0, calc(100% - 4px) 0, calc(100% - 4px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, 100% 4px,
+      100% calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) 100%,
+      4px 100%, 4px calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 4px), 0 calc(100% - 4px),
+      0 4px, 2px 4px, 2px 2px, 4px 2px);
+  }
+  *, *::before, *::after { box-sizing: border-box }
+  body {
+    margin: 0; min-height: 100vh; padding: 48px 16px 72px;
+    background: var(--bg); color: var(--hi);
+    font-family: 'Fusion Pixel Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: 24px; line-height: 36px;
+    -webkit-font-smoothing: none; font-synthesis: none; font-kerning: none; font-variant-ligatures: none;
+  }
+  .wrap { width: 100%; max-width: 900px; margin: 0 auto }
+  .head { display: flex; flex-direction: column; align-items: center; text-align: center }
+  .head img { width: 64px; height: 64px; image-rendering: pixelated; margin-bottom: 24px }
+  h1 { margin: 0; font-size: 48px; line-height: 60px; font-weight: 400 }
+  .lede { margin: 12px 0 0; color: var(--a2) }
+
+  .step { margin-top: 36px; padding: 12px 12px 24px; background: var(--raise); clip-path: var(--px2) }
+  .frame { position: relative; line-height: 0; clip-path: var(--px2) }
+  .frame img { display: block; width: 100% }
+  .frame svg { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100% }
+  .frame::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 64px;
+    background: linear-gradient(transparent, var(--raise)); pointer-events: none;
+  }
+  .frame .line { stroke: var(--hi); stroke-width: 5; fill: none; stroke-linecap: square; stroke-linejoin: miter }
+  .frame .ring { stroke: var(--hi); stroke-width: 4; fill: none }
+  .frame .halo { fill: #eeeeee24 }
+  .frame .bub { fill: var(--hi) }
+  .frame .digit { fill: var(--bg); shape-rendering: crispEdges }
+
+  .say { display: flex; gap: 24px; padding: 24px 12px 0 }
+  .say .n {
+    flex: none; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+    background: var(--hi); color: var(--bg); clip-path: var(--px2);
+  }
+  .say h2 { margin: 0; font-size: 24px; line-height: 36px; font-weight: 400 }
+  .say p { margin: 0; color: var(--a2) }
+  .say b { color: var(--hi); font-weight: 400 }
+
+  /* Другие наши приложения тремя плитками в ряд: значок, имя, зачем нужно,
+     кнопки магазинов (Android — Google Play, браузер — Chrome Web Store)
+     прижаты к низу плитки. Значки 128 px вдвое меньше — ровно, без мыла. */
+  .more { margin-top: 72px }
+  .more > h2 { margin: 0 0 12px; font-size: 24px; line-height: 36px; font-weight: 400; text-align: center; color: var(--a2) }
+  .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+  .app {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding: 24px; background: var(--raise); clip-path: var(--px2);
+  }
+  .app img { width: 64px; height: 64px; margin-bottom: 12px }
+  .app > div { display: flex; flex-direction: column; flex: 1; width: 100% }
+  .app h3 { margin: 0; font-size: 24px; line-height: 36px; font-weight: 400 }
+  .app p { margin: 0; color: var(--a2) }
+  .get { display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: auto; padding-top: 24px }
+  .get a {
+    display: flex; align-items: center; justify-content: center; height: 48px; padding: 0 12px;
+    background: var(--hi); color: var(--bg); text-decoration: none; clip-path: var(--px2);
+  }
+  .get a:hover, .get a:focus-visible { background: var(--a3); outline: none }
+
+  @media (max-width: 720px) { .apps { grid-template-columns: 1fr } }
+  @media (max-width: 600px) {
+    h1 { font-size: 24px; line-height: 36px }
+    .say { gap: 12px; padding: 24px 0 0 }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <img src="icons/icon128.png" alt="" width="64" height="64">
+      <h1>Installed</h1>
+      <p class="lede">Two more steps left</p>
+    </header>
+
+    <!-- Шаг 1: пазл в панели инструментов, обведён там, где он на снимке. -->
+    <section class="step">
+      <div class="frame">
+        <img src="shots/pin-1.png" alt="Chrome toolbar with the extensions button">
+        <svg viewBox="0 0 1180 380" aria-hidden="true">
+          <circle class="halo" cx="1067" cy="62" r="38"/>
+          <circle class="ring" cx="1067" cy="62" r="29"/>
+          <path class="line" d="M868,215 C928,192 1004,152 1034,105"/>
+          <path class="line" d="M1019,115 L1034,103 L1034,122"/>
+          <circle class="bub" cx="844" cy="228" r="19"/>
+          <g class="digit" transform="translate(836.5 217.5) scale(3)">
+            <rect x="2" y="0" width="1" height="6"/><rect x="1" y="1" width="1" height="1"/><rect x="1" y="6" width="3" height="1"/>
+          </g>
+        </svg>
+      </div>
+      <div class="say">
+        <span class="n">1</span>
+        <div>
+          <h2>Open extensions</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Шаг 2: булавка в нашей строке настоящего меню. -->
+    <section class="step">
+      <div class="frame">
+        <img src="shots/pin-2.png" alt="The extensions menu with Audio Translator and its pin">
+        <svg viewBox="0 0 1180 380" aria-hidden="true">
+          <circle class="halo" cx="997" cy="227" r="32"/>
+          <circle class="ring" cx="997" cy="227" r="24"/>
+          <path class="line" d="M960,353 C994,337 998,301 996,263"/>
+          <path class="line" d="M983,279 L996,259 L1010,279"/>
+          <circle class="bub" cx="920" cy="357" r="19"/>
+          <g class="digit" transform="translate(912.5 346.5) scale(3)">
+            <rect x="1" y="0" width="3" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="2"/>
+            <rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/>
+            <rect x="0" y="6" width="5" height="1"/>
+          </g>
+        </svg>
+      </div>
+      <div class="say">
+        <span class="n">2</span>
+        <div>
+          <h2>Pin Audio Translator</h2>
+        </div>
+      </div>
+    </section>
+    <section class="more">
+      <h2>More from us</h2>
+      <div class="apps">
+      <div class="app">
+        <img src="shots/app-audio.png" alt="" width="64" height="64">
+        <div>
+          <h3>Audio Translator<br>for Android</h3>
+          <p>Same features for your phone</p>
+          <div class="get"><a href="https://play.google.com/store/apps/details?id=app.audiotranslator" target="_blank" rel="noopener">Install</a></div>
+        </div>
+      </div>
+      <div class="app">
+        <img src="shots/app-image.png" alt="" width="64" height="64">
+        <div>
+          <h3>Image Translator</h3>
+          <p>Translate text in any image</p>
+          <div class="get"><a href="https://chromewebstore.google.com/detail/njnbjblidokijpcngceaimifeldchchl" target="_blank" rel="noopener">For browser</a><a href="https://play.google.com/store/apps/details?id=app.imagetranslator" target="_blank" rel="noopener">For Android</a></div>
+        </div>
+      </div>
+      <div class="app">
+        <img src="shots/app-party.png" alt="" width="64" height="64">
+        <div>
+          <h3>YouTube Watch Party</h3>
+          <p>Watch YouTube together in sync</p>
+          <div class="get"><a href="https://chromewebstore.google.com/detail/dhcdmfmmhockomkcjohkkmmiceeecjef" target="_blank" rel="noopener">For browser</a><a href="https://play.google.com/store/apps/details?id=com.mbplanes.watchparty" target="_blank" rel="noopener">For Android</a></div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,445 @@
+/* Графит, минимум. Шрифт — Fusion Pixel 12 моноширинный вдвое: пиксель 2 px,
+   ячейка 12×24. Серые — xterm-256. Управления три: язык звука, язык
+   перевода, выключатель. Слова — только в подсказках при наведении,
+   остальное говорят картинки. Макет — доски Off / Live / Langs / Hints.
+
+   Fusion Pixel (Ark Pixel), SIL OFL 1.1 — лицензии в font/. Подмножество
+   то же, что у fusion-pixel-ui.woff2 (font/README.md), только из
+   моноширинной сборки 12px: латиница, кириллица, греческий — 13 КБ. Чего в
+   нём нет (китайская, арабская, деванагари), рисует системный моноширинный. */
+@font-face {
+  font-family: 'Fusion Pixel Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(font/fusion-pixel-mono.woff2) format('woff2');
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #080808; --raise: #1c1c1c; --hover: #303030; --deco: #444444;
+  --a1: #626262; --a2: #808080; --a3: #a8a8a8; --hi: #eeeeee;
+  /* Пиксельное скругление: две ступеньки по 2 px. */
+  --px2: polygon(4px 0, calc(100% - 4px) 0, calc(100% - 4px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, 100% 4px,
+    100% calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) 100%,
+    4px 100%, 4px calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 4px), 0 calc(100% - 4px),
+    0 4px, 2px 4px, 2px 2px, 4px 2px);
+  --px1: polygon(2px 0, calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px),
+    calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px), 0 2px, 2px 2px);
+}
+*, *::before, *::after { box-sizing: border-box }
+html, body { height: 100% }
+body {
+  margin: 0; position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  background: var(--bg); color: var(--hi);
+  font-family: 'Fusion Pixel Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  font-size: 24px; line-height: 36px;
+  -webkit-font-smoothing: none; font-synthesis: none; font-kerning: none; font-variant-ligatures: none;
+}
+[hidden] { display: none !important }
+svg { display: block; flex: none; shape-rendering: crispEdges; fill: currentColor }
+:where(button) { all: unset; box-sizing: border-box; cursor: pointer }
+
+/* ---------- шапка: [динамик EN] → [субтитры RU]   [питание] ---------- */
+
+.hd { position: relative; z-index: 12; display: flex; align-items: center; gap: 8px; flex: none; padding: 12px; transition: opacity .16s ease-out }
+/* Просьба словаря требует ответа: пока она висит, шапку не трогаем — живы лишь
+   «скачать» и крестик в самой полосе. Приглушаем, а не прячем, чтобы было видно
+   выбор языков, к которому вернёшься ответом. */
+/* Обёртка держит подсказку вне обрезанной кнопки. --half — половина ширины
+   кнопки, по ней носик подсказки встаёт под её середину (graphite.js). */
+.b { position: relative; display: flex; --half: 32px }
+.b.end { margin-left: auto }
+
+.lg {
+  display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px;
+  background: var(--raise); color: var(--hi); clip-path: var(--px2); white-space: pre;
+  transition: background-color .15s ease-out;
+}
+.lg .ic { color: var(--a3) }
+.lg .cr { color: var(--a2); transition: transform .18s ease-out }
+.b:hover .lg, .b:has(> button:focus-visible) .lg, .lg.open { background: var(--hover) }
+.lg.open .cr { transform: scaleY(-1) }
+.ar { color: var(--a1) }
+/* Панель Chrome узкая — 320 px по умолчанию. Стрелки раскрытия там не
+   влезают, и кнопка без них всё равно читается как кнопка. */
+@media (max-width: 340px) { .hd .lg .cr { display: none } }
+/* Боковая панель Firefox ещё уже — 240 px, и сторона с шириной расширению
+   не подвластны. Без значков у кодов языка шапка входит, коды и так читаются. */
+@media (max-width: 300px) { .hd { gap: 6px } .hd .lg .ic { display: none } }
+/* Самая узкая панель Firefox — 186 px: без стрелки между кодами, с узким
+   выключателем. */
+@media (max-width: 220px) {
+  .hd { gap: 6px; padding: 8px 12px } .hd .ar { display: none } .hd .lg { padding: 0 6px }
+}
+
+/* Выключатель: дорожка 64×36, ползунок 28×28 со знаком питания. */
+.sw {
+  position: relative; width: 64px; height: 36px; background: var(--hover); clip-path: var(--px2);
+  transition: background-color .2s ease-out;
+}
+.sw .kn {
+  position: absolute; left: 4px; top: 4px; width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--a2); color: var(--hover); clip-path: var(--px1);
+  transition: left .22s cubic-bezier(.3, .7, .3, 1), background-color .2s ease-out, color .2s ease-out;
+}
+.b:hover .sw:not(.on), .b:has(> button:focus-visible) .sw:not(.on) { background: var(--deco) }
+.sw.on { background: var(--hi) }
+.sw.on .kn { left: 32px; background: var(--bg); color: var(--hi) }
+@media (max-width: 220px) { .sw { width: 48px } .sw.on .kn { left: 16px } }
+
+/* ---------- подсказки при наведении ---------- */
+
+.b > .tip {
+  position: absolute; z-index: 20; top: calc(100% + 4px); left: 50%; transform: translateX(-50%);
+  display: none; flex-direction: column; align-items: center; pointer-events: none;
+  white-space: pre;
+}
+/* Носик — пиксельный треугольник 10×6. */
+.b > .tip i { width: 10px; height: 6px; background: var(--hi); clip-path: polygon(4px 0, 6px 0, 6px 2px, 8px 2px, 8px 4px, 10px 4px, 10px 6px, 0 6px, 0 4px, 2px 4px, 2px 2px, 4px 2px) }
+.b > .tip > span { height: 36px; padding: 0 10px; background: var(--hi); color: var(--bg); clip-path: var(--px2) }
+/* У краёв панели подсказка прижата к кнопке, носик — под её серединой. */
+.b > .tip.l { left: 0; transform: none; align-items: flex-start }
+.b > .tip.l i { margin-left: calc(var(--half) - 5px) }
+.b > .tip.r { left: auto; right: 0; transform: none; align-items: flex-end }
+.b > .tip.r i { margin-right: calc(var(--half) - 5px) }
+.b:hover > .tip, .b:has(> button:focus-visible) > .tip { display: flex; animation: show .14s ease-out }
+/* Пока открыт список, подсказки только заслоняют его. */
+body.menu-open .b > .tip { display: none !important }
+/* Подсказка одна: наведённая гасит остальные, и сказанную сама (say-it), и
+   по фокусу. Иначе «Click again to confirm» над звёздами наезжала на OG. */
+body:has(.b:hover) .b:not(:hover) > .tip { display: none }
+/* Без наведения сказанная (say-it) главнее подсказки по фокусу. */
+body:not(:has(.b:hover)):has(.b.say-it) .b:not(.say-it) > .tip { display: none }
+
+/* ---------- список языков: код и самоназвание ---------- */
+
+/* Кайма в 2 px тоном --deco: над карточками настроек того же цвета, что
+   список, без неё он с ними сливается. */
+.menu {
+  /* Шириной по самому длинному имени, не уже 260 и не шире панели. Имена
+     не режутся: длинные подписи «Определить сам» укорочены так, что всё
+     влезает и в самую узкую боковую панель (320). */
+  position: absolute; z-index: 31; top: 48px; left: 8px; width: max-content; min-width: 260px; max-width: calc(100% - 16px);
+  padding: 2px; background: var(--deco); clip-path: var(--px2);
+}
+/* Уже 276 px (Firefox) не шире панели: min-width иначе перебивает max-width. */
+@media (max-width: 300px) { .menu { min-width: 0 } }
+.menu .ls {
+  max-height: calc(100vh - 72px); overflow-y: auto; overscroll-behavior: contain;
+  /* Поле 4 px со всех сторон: без верхнего выделенная первая строка
+     упиралась в кайму, а слева от неё было 4 px — «кубик» выходил кривым. */
+  border: 4px solid var(--raise);
+  /* Полоса прокрутки своя (.sb): системная у Firefox на Linux — линия в
+     1 px поверх строк, выделенная упиралась в неё. Справа от строки те же
+     4 px, что слева, потом ползунок в 4 px. */
+  padding-right: 8px; background: var(--raise); clip-path: var(--px2);
+  scrollbar-width: none;
+  /* Целые строки только при открытии (scrollTop в graphite.js); прокрутку
+     после этого до края строки не докручиваем. */
+}
+.menu .ls::-webkit-scrollbar { display: none }
+/* Ползунок: над правым полем списка, у каймы 4 px, как строка слева. */
+.menu .sb { position: absolute; right: 6px; width: 4px; background: var(--deco); cursor: pointer; touch-action: none }
+.menu .sb:hover, .menu .sb.drag { background: var(--a3) }
+/* Язык интерфейса — список внутри своей плитки, прочие плитки на это время
+   убраны: раскрытый ничего в настройках не заслоняет. */
+.sheet.picking .tile:not(:has(> .menu)) { display: none }
+.tile > .menu { position: relative; width: auto; min-width: 0; max-width: none; margin: 0 12px 12px }
+.menu .it {
+  display: flex; gap: 12px; height: 36px; padding: 0 8px; white-space: pre; color: var(--a3); cursor: pointer; outline: none;
+  transition: background-color .1s ease-out;
+}
+.menu .it .c { flex: none; width: 48px; color: var(--hi) }
+.menu .it:hover, .menu .it:focus { background: var(--hover) }
+.menu .it.sel { background: var(--hi); color: var(--bg); clip-path: var(--px1) }
+.menu .it.sel .c { color: var(--bg) }
+
+/* ---------- что мешает работать ---------- */
+
+/* Тем же пиксельным кеглем, что и лента (24/36): Fusion Pixel рисует 2-px
+   пиксель только на 24 px, а на 12 px схлопывался в 1-px и мылился — читался
+   не как наш шрифт. Полоса переносится (flex-wrap), длинный текст ошибки
+   ложится в несколько строк. Знак — та же пиксельная плашка, что и подсказки,
+   ростом в строку (24×24). */
+.note {
+  flex: none; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 4px 12px;
+  margin: 0 12px 12px; padding: 8px 10px; background: var(--raise); clip-path: var(--px2);
+  font-size: 24px; line-height: 36px; color: var(--a3);
+}
+.note .bang {
+  flex: none; width: 24px; height: 24px; margin-top: 6px; line-height: 24px;
+  text-align: center; font-weight: 400;
+  background: var(--hi); color: var(--bg); clip-path: var(--px1);
+}
+.note .say { flex: 1; min-width: 0; overflow-wrap: anywhere }
+.note .say:empty { display: none }
+/* Без текста — одна кнопка словаря: знак встаёт по её середине. */
+.note:has(> .say:empty) { align-items: center }
+.note .b { flex: none; font-size: 24px; line-height: 36px }
+.note .lg { background: var(--hover) }
+.note .b:hover .lg { background: var(--deco) }
+.note .lg:disabled { cursor: default; color: var(--a1) }
+/* Кольцо загрузки словаря — на месте галки и крестика, той же плашкой 36×36.
+   Клетки по кругу загораются по часовой от верхней середины вслед за
+   процентом; следующая дышит курсором, пока Chrome молчит о прогрессе. */
+.note .ring { flex: none; display: grid; place-items: center; width: 36px; height: 36px; background: var(--hover); clip-path: var(--px2) }
+.ring svg { shape-rendering: crispEdges }
+.ring rect { fill: var(--deco); transition: fill .12s ease-out }
+.ring rect.on { fill: var(--hi) }
+.ring rect.next { fill: var(--a2); animation: blink 1.1s ease-in-out infinite }
+
+/* ---------- лента ---------- */
+
+/* Прокрутки нет: что уехало за верхний край — уехало. Лента книгой (MODE
+   'книга' в sidepanel.js): прижата к верху, у низа съезжает на половину окна
+   через transform на .rows. */
+.view {
+  flex: 1; min-height: 0; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 0 12px 12px; transition: opacity .2s ease-out;
+}
+/* Под настройками лента уходит в тень: в щели между плитками не лезет текст. */
+body.sheet-open .view { opacity: .15 }
+/* Ожидание речи: посреди пустой ленты, пока не пришла первая строка. */
+.wait {
+  position: absolute; inset: 0 12px 12px; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 12px; text-align: center; pointer-events: none;
+}
+.wait[hidden] { display: none }
+.wait b { font-weight: normal; font-size: 24px; line-height: 28px; color: var(--hi) }
+.wait span { font-size: 18px; line-height: 24px; color: var(--a3) }
+/* Слушаем другую вкладку: на месте ленты — где субтитры и «Listen here».
+   Лента и всё, что при ней, прячутся, но место держат: вернулись — ничего
+   не съехало. */
+.away {
+  position: absolute; inset: 0 24px 12px; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 12px; text-align: center;
+}
+.away b { font-weight: normal; font-size: 24px; line-height: 28px; color: var(--hi) }
+.away .tab { display: flex; align-items: center; gap: 8px; max-width: 100%; font-size: 18px; line-height: 24px; color: var(--a3) }
+.away .tab .ic { color: var(--a2) }
+.away .tab span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.away .b { margin-top: 12px }
+/* Подпись строчными (у «д», «щ» хвосты вниз): по середине строки она на глаз
+   ниже середины кнопки — снизу 6 px, сверху 10. Выше на пиксель шрифта (2 px). */
+.away .lg { background: var(--hi); color: var(--bg); padding-bottom: 4px }
+.away .b:hover .lg, .away .b:has(> button:focus-visible) .lg { background: var(--a3) }
+.away .lg:disabled { cursor: default; background: var(--a2) }
+.away .why { font-size: 18px; line-height: 24px; color: var(--a3) }
+/* На вкладке, которую не слушаем, панель — только «субтитры там», имя той
+   вкладки и кнопка перенести их сюда. Шапка с языками, уведомления (загрузка пары идёт одна на
+   все панели и здесь выглядела второй), лента и низ — дело слушаемой вкладки.
+   Места не теряют: блок не прыгает, когда вкладку меняют. Меню и лист
+   настроек закрывает paintAway. */
+body[data-away] :is(.hd, .note, .view > :not(.away), .orig, .ft) { visibility: hidden }
+.rows { flex: none; will-change: transform; line-height: 28px }
+/* Зазор — от базовой линии до верха заглавной следующей строки (заглавная у
+   шрифта 2/3 кегля), x = 12 px: внутри фразы x (интерлиньяж 28 и 24 у
+   оригинала), оригинал к своему переводу 1.25x (3 px под ::part(og)), между
+   фразами 2x (12 px сверху строки): 1.5x на глаз от 1.25x не отличался.
+   Как в плашке (overlay.js). */
+/* Строка стареет плавно: новая снизу отодвигает её на ступень тусклее, и
+   ступень эта доезжает, а не щёлкает. */
+.row { margin-top: 12px; color: var(--a1); white-space: pre-wrap; overflow-wrap: anywhere; transition: color .3s ease-out, opacity .22s ease-out }
+/* Слово только проявляется (wordsInto), сдвигов на нём нет: обычный inline.
+   Свой переход цвета нужен слову только у двух нижних строк: там живая
+   строка закрывается и её слова уходят со своих цветов. Выше цвет слову
+   достаётся от строки, а она и так доезжает. Переход на каждом слове всей
+   ленты запускал на каждой реплике сотни анимаций, и Firefox считал их
+   главным потоком каждый кадр. */
+.rows > .row:nth-last-child(-n+2) .w { transition: color .3s ease-out }
+.rows > .row:first-child { margin-top: 0 }
+/* Строки одной мысли — один абзац: продолжение без отступа (data-join). */
+.rows > .row[data-join="1"] { margin-top: 0 }
+/* С оригиналом продолжение — уже своя пара «оригинал + перевод», и слитая
+   с прошлой она читалась одной стеной. */
+body[data-orig='1'] .rows > .row[data-join="1"]:not([data-orig='']) { margin-top: 12px }
+.rows > .row:nth-last-child(3) { color: var(--a2) }
+.rows > .row:nth-last-child(2) { color: var(--a3) }
+.rows > .row:nth-last-child(1) { color: var(--hi) }
+/* Живая строка: прочитанное приглушено, край речи — ярким. */
+.rows > .row.open .w { color: var(--a3); transition: color .18s linear }
+.rows > .row.open .w.tip { color: var(--hi) }
+.row.fresh { animation: show .32s cubic-bezier(.3, .1, .2, 1) }
+@keyframes show { from { opacity: 0 } }
+
+/* Курсор — блок в ячейку шрифта. Пока звук идёт, горит ровно; в тишине
+   дышит: гаснет и разгорается, а не щёлкает. */
+.rows > .row.open::after, .hear i {
+  content: ''; display: inline-block; width: 12px; height: 24px; margin-left: 4px; vertical-align: -4px;
+  background: var(--hi); animation: blink 1.1s ease-in-out infinite;
+}
+body[data-voice='1'] .rows > .row.open::after, body[data-voice='1'] .hear i { animation: none }
+@keyframes blink { 0%, 35% { opacity: 1 } 55%, 85% { opacity: 0 } }
+
+/* «Слышу речь, слова ещё считаются» — один курсор на месте будущей строки.
+   Погашенный, он держит место: иначе его появление двигало бы ленту. */
+.row.hear { flex: none; height: 28px; margin-top: 12px; transition: opacity .25s ease-out }
+.row.hear i { margin-left: 0 }
+.row.hear.off { opacity: 0; visibility: hidden; transition: opacity .25s ease-out, visibility 0s .25s }
+
+/* Верхний край режется по строке, а не растром. Раньше здесь висел растровый
+   навес на 48 px — три полосы дизеринга фоном поверх уезжающей строки. На
+   пиксельном шрифте он читался не как затухание, а как рассыпающаяся буква:
+   ровно «буквы сверху рассыпаются» из отчёта, и обрезал он строку посреди
+   знака. Теперь строку, у которой верх ушёл бы за кромку, прячет целиком
+   sidepanel.js (clipTop) — на экране либо вся строка, либо ничего, навес не
+   нужен. */
+.fade { display: none }
+
+/* Значок загрузки — по центру ленты, ровно там, где зритель ждёт субтитры.
+   Прогрев бывает только на первом включении за сессию (дальше модель тёплая),
+   но пока веса едут, пустая лента читалась как поломка. Четыре клетки с бегущим
+   огоньком и строка «загружаю переводчик…». Абсолютный — чтобы не двигать ленту
+   и не мешать подсчёту влезающих строк (sidepanel.js). */
+.loading {
+  position: absolute; inset: 0; z-index: 5; display: none;
+  flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  pointer-events: none; color: var(--a3);
+}
+.loading.on { display: flex }
+.loading .spin { display: flex; gap: 6px }
+.loading .spin b { width: 10px; height: 10px; background: var(--deco); animation: load 1.1s linear infinite }
+.loading .spin b:nth-child(2) { animation-delay: .12s }
+.loading .spin b:nth-child(3) { animation-delay: .24s }
+.loading .spin b:nth-child(4) { animation-delay: .36s }
+.loading .msg { width: 100%; text-align: center }
+@keyframes load { 0%, 12% { background: var(--deco) } 12.01%, 25% { background: var(--hi) } 25.01%, 100% { background: var(--deco) } }
+
+/* Блок оригинала под лентой (старая вёрстка) не нужен: оригинал идёт строкой
+   над своим переводом. */
+.orig { display: none }
+
+/* Оригинал над своим переводом — переключатель в настройках. Кегль 18 px
+   против 24 у перевода: отличает оригинал с первого взгляда, где тусклость не
+   отличала, а 12 px (родной размер шрифта) читался с трудом. Текст живёт в
+   тени строки (origInto в sidepanel.js), чтобы выделяться и копироваться. */
+.row::part(og) {
+  display: none; margin: 0 0 3px -4px; white-space: normal;
+  font-size: 18px; line-height: 24px; color: var(--bg);
+}
+/* Чёрный на сером: фон под каждой строкой оригинала, текст у края перевода
+   (отступ 4 px съеден полем слева). Фон стареет вместе со строкой. */
+.row::part(ogt) {
+  padding: 1px 4px; background: var(--deco); transition: background-color .3s ease-out;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+body[data-orig='1'] .rows > .row:not([data-orig=''])::part(og) { display: block }
+.rows > .row:nth-last-child(2)::part(ogt) { background: var(--a1) }
+.rows > .row:nth-last-child(1)::part(ogt) { background: var(--a2) }
+
+/* ---------- низ: настройки, плашка, оценка ---------- */
+
+.ft { position: relative; z-index: 12; display: flex; align-items: center; gap: 8px; flex: none; padding: 0 12px 12px }
+/* Плашка на странице или открытые настройки — светлой кнопкой, как выбранный
+   язык в списке. */
+.ft .lg[aria-pressed='true'], .ft .lg[aria-expanded='true'] { background: var(--hi); color: var(--bg) }
+.ft .lg[aria-pressed='true'] .ic, .ft .lg[aria-expanded='true'] .ic { color: var(--bg) }
+.ft .b:hover .lg:is([aria-pressed='true'], [aria-expanded='true']),
+.ft .b:has(> button:focus-visible) .lg:is([aria-pressed='true'], [aria-expanded='true']) { background: var(--a3) }
+/* У низа подсказка встаёт над кнопкой, носик смотрит вниз. */
+.b > .tip.up { top: auto; bottom: calc(100% + 4px) }
+.b > .tip.up i { transform: scaleY(-1) }
+.b.say-it > .tip { display: flex }
+/* Настройки и плашка поверх страницы: квадратные кнопки со значком. Подсказка
+   прижата к левому краю кнопки, носик — под серединой 36 px. */
+.lg.sq { width: 36px; padding: 0; justify-content: center }
+#bset, #bovl, #bcopy { --half: 18px }
+/* Подсказка копирования посередине над кнопкой, длинная («Copier les
+   sous-titres») — не левее поля низа: сдвиг --shift считает graphite.js по
+   ширине надписи. При постоянных 88 px короткое «Copied» кончалось левее
+   кнопки, и носик висел отдельно. Носик — под кнопкой. */
+#bcopy { --shift: 0px }
+#bcopy > .tip.l { left: calc(-1 * var(--shift)) }
+#bcopy > .tip.l i { margin-left: calc(var(--shift) + var(--half) - 5px) }
+/* Над звёздами носик под серединой пяти звёзд, а короткая надпись («Thank
+   you!») уже них: облако не уже звёзд, иначе носик висит в воздухе. */
+#brate > .tip > span { min-width: calc(2 * var(--half)); text-align: center }
+
+/* ---------- настройки ---------- */
+
+/* Плитки над низом, каждая своей плашкой. Поля — те же 12 px, что у шапки и
+   низа, зазоры — те же 8 px, что между кнопками низа. Под плитками фон панели:
+   тусклая лента в щелях читалась мусором. */
+.sheet {
+  position: absolute; z-index: 30; left: 0; right: 0; bottom: 48px;
+  display: flex; flex-direction: column; gap: 8px; padding: 8px 12px;
+  background: var(--bg);
+}
+.sheet .tile { background: var(--raise); clip-path: var(--px2) }
+/* Управление стоит на строке заголовка, а не посреди плитки: у плиток разная
+   высота, и по центру переключатели гуляли от плитки к плитке. */
+.sheet .opt { display: flex; align-items: flex-start; gap: 12px; padding: 12px }
+.sheet .opt .tg { margin-top: 4px }
+.sheet .opt:has(.tg) { cursor: pointer }
+.sheet .lab { flex: 1; min-width: 0; display: flex; flex-direction: column }
+/* Выбор шире строки: под подписью, а не сбоку. */
+.sheet .opt.stack { flex-wrap: wrap }
+.sheet .opt.stack .lab { flex-basis: 100% }
+.sheet .lab b { font-weight: 400; color: var(--hi) }
+/* Пояснение — кеглем оригинала (18 px): на 12 px пиксельный шрифт мылится. */
+.sheet .lab small { font-size: 18px; line-height: 27px; color: var(--a2); overflow-wrap: anywhere }
+/* В 240 px (Firefox) пояснение рядом с выключателем шло столбиком по слову —
+   там оно под заголовком во всю ширину плитки. */
+@media (max-width: 300px) {
+  .sheet .opt:not(.stack) { display: grid; grid-template-columns: 1fr auto; gap: 0 12px }
+  .sheet .opt:not(.stack) .lab { display: contents }
+  .sheet .opt:not(.stack) .lab small { grid-column: 1 / -1 }
+  .sheet .opt:not(.stack) > :not(.lab) { grid-column: 2; grid-row: 1 }
+}
+/* «Сменить файл» — под автосохранением, во всю ширину плитки. Кнопка сама по
+   себе не растягивается даже блоком — ширину задаём. */
+.sheet .more { padding: 0 12px 12px }
+.sheet .more .lg { width: 100%; justify-content: center; background: var(--hover) }
+.sheet .more .lg:hover, .sheet .more .lg:focus-visible { background: var(--deco) }
+/* Выбор из списка (язык интерфейса) — кнопкой шапки на плашке плитки. */
+.sheet .opt > .lg { flex: none; background: var(--hover) }
+.sheet .opt > .lg:hover, .sheet .opt > .lg:focus-visible, .sheet .opt > .lg.open { background: var(--deco) }
+
+/* Переключатель настройки — выключатель шапки в миниатюре: 48×28, ползунок 20. */
+.tg { position: relative; flex: none; width: 48px; height: 28px; background: var(--hover); clip-path: var(--px1); transition: background-color .2s ease-out }
+.tg i { position: absolute; left: 4px; top: 4px; width: 20px; height: 20px; background: var(--a2); transition: left .22s cubic-bezier(.3, .7, .3, 1), background-color .2s ease-out }
+.opt:hover .tg:not([aria-checked='true']), .tg:focus-visible:not([aria-checked='true']) { background: var(--deco) }
+.tg[aria-checked='true'] { background: var(--hi) }
+.tg[aria-checked='true'] i { left: 24px; background: var(--bg) }
+.tg:focus-visible { outline: 2px solid var(--a3); outline-offset: -2px }
+
+/* Выбор из двух (CPU или GPU) — той же плашкой: выбранное светлое. */
+.seg { flex: none; display: flex; padding: 4px; gap: 0; background: var(--hover); clip-path: var(--px1) }
+/* У знаков пиксельного шрифта справа 2 px пустоты: поля 9 и 7 ставят буквы
+   посередине половины, при 8 и 8 они сидели левее. */
+.seg button { height: 28px; line-height: 28px; padding: 0 7px 0 9px; color: var(--a2); clip-path: var(--px1); transition: background-color .2s ease-out, color .2s ease-out }
+.seg button:hover, .seg button:focus-visible { color: var(--hi) }
+.seg button[aria-checked='true'] { background: var(--hi); color: var(--bg) }
+.seg button:focus-visible { outline: 2px solid var(--a3); outline-offset: -2px }
+
+/* ---------- оценка ---------- */
+
+/* Звёзды на своей плашке высотой с OG: два бруска на одной линии читаются
+   ровно, а голые звёзды рядом с плашкой казались съехавшими. Плашка же ставит
+   правый край звёзд на поле, по которому стоит выключатель. */
+.ft .stars { display: flex; gap: 0; padding: 0 4px; background: var(--raise); clip-path: var(--px2) }
+.ft .st {
+  display: flex; align-items: center; justify-content: center; width: 32px; height: 36px; clip-path: var(--px1);
+  color: var(--a1); transition: color .12s ease-out, background-color .12s ease-out;
+}
+.ft .st:focus-visible { background: var(--hover) }
+/* Четыре бруска в 320 px не входят: звёзды уже, на 20 px. */
+@media (max-width: 340px) { .ft { gap: 6px } .ft .st { width: 28px } }
+/* В 240 px (Firefox) не входят и так: звёзды своей строкой во всю ширину, а
+   настройки над низом поднимаются на её высоту. */
+@media (max-width: 300px) {
+  .ft { flex-wrap: wrap; row-gap: 8px }
+  #brate { flex: 1 0 100%; margin-left: 0 }
+  #brate .stars { flex: 1; justify-content: space-between }
+  .ft .st { flex: 1; width: auto }
+  .sheet { bottom: 92px }
+}
+/* Звёзды до наведённой загораются разом — data-on ставит graphite.js. */
+.ft .stars[data-on='1'] .st:nth-child(-n+1), .ft .stars[data-on='2'] .st:nth-child(-n+2),
+.ft .stars[data-on='3'] .st:nth-child(-n+3), .ft .stars[data-on='4'] .st:nth-child(-n+4),
+.ft .stars[data-on='5'] .st { color: var(--hi) }
+
