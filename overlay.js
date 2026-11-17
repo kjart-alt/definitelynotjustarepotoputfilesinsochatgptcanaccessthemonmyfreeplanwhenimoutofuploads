@@ -1,6 +1,6 @@
 // Audio Translator: use YouTube's own caption window instead of a floating overlay.
 (() => {
-  const VERSION = 'youtube-native-captions-1';
+  const VERSION = 'youtube-native-captions-2';
   const PLAYER_SELECTOR = '#container';
   const CAPTION_CONTAINER_ID = 'ytp-caption-window-container';
 
